@@ -1,5 +1,3 @@
 design
 assets/fonts
-.README
-.README-template
-.style-guide
+*.md
