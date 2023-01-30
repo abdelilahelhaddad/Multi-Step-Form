@@ -27,10 +27,52 @@ body {
   font-weight: var(--font-weight-400);
 }
 
+main {
+  min-height: 100vh;
+}
 main #sidebar {
   background-image: url("../images/bg-sidebar-mobile.svg");
   background-size: cover;
+  min-height: 25vh;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 2rem 5rem;
 }
-main #sidebar .allSteps #stepContent {
+main #sidebar #stepOne, main #sidebar #stepTwo, main #sidebar #stepThree, main #sidebar #stepFour {
+  display: flex;
+}
+main #sidebar #stepOne #stepOneNum,
+main #sidebar #stepOne #stepTwoNum,
+main #sidebar #stepOne #stepThreeNum,
+main #sidebar #stepOne #stepFourNum, main #sidebar #stepTwo #stepOneNum,
+main #sidebar #stepTwo #stepTwoNum,
+main #sidebar #stepTwo #stepThreeNum,
+main #sidebar #stepTwo #stepFourNum, main #sidebar #stepThree #stepOneNum,
+main #sidebar #stepThree #stepTwoNum,
+main #sidebar #stepThree #stepThreeNum,
+main #sidebar #stepThree #stepFourNum, main #sidebar #stepFour #stepOneNum,
+main #sidebar #stepFour #stepTwoNum,
+main #sidebar #stepFour #stepThreeNum,
+main #sidebar #stepFour #stepFourNum {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--neutral-alabaster);
+  border: 2px solid var(--neutral-alabaster);
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  font-weight: 500;
+}
+main #sidebar #stepOne .active, main #sidebar #stepTwo .active, main #sidebar #stepThree .active, main #sidebar #stepFour .active {
+  background-color: var(--primary-light-blue) !important;
+  color: var(--primary-marine-blue) !important;
+  border: none !important;
+}
+main #sidebar #stepOne #stepContent, main #sidebar #stepTwo #stepContent, main #sidebar #stepThree #stepContent, main #sidebar #stepFour #stepContent {
   display: none;
+}
+main #personalInfo {
+  min-height: 75vh;
+  background-color: var(--primary-light-blue);
 }/*# sourceMappingURL=style.css.map */

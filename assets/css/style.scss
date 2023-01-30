@@ -32,13 +32,42 @@ body{
 }
 
 main{
+  min-height: 100vh;
   #sidebar{
     background-image: url("../images/bg-sidebar-mobile.svg");
     background-size: cover;
-    .allSteps{
+    min-height: 25vh;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 2rem 5rem;
+    #stepOne,#stepTwo,#stepThree,#stepFour{
+        display: flex;
+      #stepOneNum, 
+      #stepTwoNum,
+      #stepThreeNum,
+      #stepFourNum{
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        color: var(--neutral-alabaster);
+        border: 2px solid var(--neutral-alabaster);
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        font-weight: 500;
+      }
+      .active{
+        background-color: var(--primary-light-blue) !important;
+        color: var(--primary-marine-blue) !important;
+        border: none !important;
+      }
       #stepContent{
         display: none;
       }
     }
+  }
+  #personalInfo{
+    min-height: 75vh;
+    background-color: var(--primary-light-blue);
   }
 }
