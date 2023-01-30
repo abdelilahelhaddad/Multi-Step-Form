@@ -32,11 +32,11 @@ body{
 }
 
 main{
-  min-height: 100vh;
+  height: 100vh;
   #sidebar{
     background-image: url("../images/bg-sidebar-mobile.svg");
     background-size: cover;
-    min-height: 25vh;
+    height: 27%;
     display: flex;
     justify-content: space-evenly;
     padding: 2rem 5rem;
@@ -66,8 +66,43 @@ main{
       }
     }
   }
-  #personalInfo{
-    min-height: 75vh;
+  #personalInfos{
+    position: relative;
+    height: 60%;
     background-color: var(--primary-light-blue);
+    #personalInfosContent{
+      position: absolute;
+      top: -16%;
+      left: 5%;
+      right: 5%;
+      z-index: 2;
+      background-color: var(--neutral-alabaster);
+      border-radius: 10px;
+      padding: 2rem 1.5rem;
+    }
+  }
+  #buttons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 13%;
+    font-weight: 500;
+    padding: 0 5%;
+    .button{
+      border: none;
+      border-radius: 5px;
+      outline: none;
+      font-weight: 700;
+      padding: 0.8rem 1rem;
+    }
+    #goBack{
+      // visibility: hidden;
+      background-color: var(--neutral-white);
+      color: var(--neutral-cool-gray);
+    }
+    #nextStep{
+      background-color: var(--primary-marine-blue);
+      color: var(--neutral-alabaster);
+    }
   }
 }
