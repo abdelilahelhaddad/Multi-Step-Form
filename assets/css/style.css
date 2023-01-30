@@ -107,20 +107,39 @@ main #personalInfos #personalInfosContent h1 {
 main #personalInfos #personalInfosContent p {
   color: var(--neutral-cool-gray);
   font-size: 1rem;
-  margin-bottom: 0.7rem;
   line-height: 1.3;
 }
 main #personalInfos #personalInfosContent label {
   color: var(--primary-marine-blue);
   font-size: 0.8rem;
 }
+main #personalInfos #personalInfosContent form .inputInfo {
+  margin-top: 0.7rem;
+}
 main #personalInfos #personalInfosContent input {
   width: 100%;
   border: 1px solid var(--neutral-light-gray);
   outline: none;
-  border-radius: 3px;
+  border-radius: 5px;
   padding: 10px 15px;
-  margin-bottom: 0.7rem;
+  font-weight: var(--font-weight-700);
+  color: var(--primary-marine-blue);
+  margin-top: 0.2rem;
+}
+main #personalInfos #personalInfosContent input:focus {
+  border: 1px solid var(--primary-purplish-blue);
+}
+main #personalInfos #personalInfosContent input::-moz-placeholder {
+  font-weight: var(--font-weight-700);
+  color: var(--neutral-cool-gray);
+}
+main #personalInfos #personalInfosContent input:-ms-input-placeholder {
+  font-weight: var(--font-weight-700);
+  color: var(--neutral-cool-gray);
+}
+main #personalInfos #personalInfosContent input::placeholder {
+  font-weight: var(--font-weight-700);
+  color: var(--neutral-cool-gray);
 }
 main #buttons {
   display: flex;
