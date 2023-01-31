@@ -46,10 +46,10 @@
           </div>
         </div>
       </div>
-      <div id="personalInfos">
-        <div id="personalInfosContent">
-          <h1>Personal info</h1>
-        <p>Please provide your name, email address, and phone number.</p>
+      <div id="personalInfos" class="activeContent blueBackground">
+        <div id="personalInfosContent" class="contentBackground">
+          <h1 class="title">Personal info</h1>
+        <p class="description">Please provide your name, email address, and phone number.</p>
         <form>
           <div class="inputInfo">
             <label for="name">Name</label><br />
@@ -82,6 +82,46 @@
             />
           </div>
         </form>
+        </div>
+      </div>
+      <div id="plansInfos" class="blueBackground">
+        <div id="plansInfosContent" class="contentBackground">
+          <h1 class="title">Select your plan</h1>
+        <p class="description">You have the option of monthly or yearly billing.</p>
+        <div id="plans">
+          <div id="arcade" class="plan">
+            <div class="planIcon">
+              <img src="assets/images/icon-arcade.svg" alt="">
+            </div>
+            <div class="planContent">
+              <p>Arcade</p>
+              <span id="monthlyPlan">$9/mo</span>
+            </div>
+          </div>
+          <div id="advanced" class="plan">
+            <div class="planIcon">
+              <img src="assets/images/icon-advanced.svg" alt="">
+            </div>
+            <div class="planContent">
+              <p>Advanced</p>
+              <span id="monthlyPlan">$12/mo</span>
+            </div>
+          </div>
+          <div id="pro" class="plan">
+            <div class="planIcon">
+              <img src="assets/images/icon-pro.svg" alt="">
+            </div>
+            <div class="planContent">
+              <p>Pro</p>
+              <span id="monthlyPlan">$15/mo</span>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="subscriptions">
+          <span>Monthly</span>
+
+          <span>Yearly</span>
+        </div> -->
         </div>
       </div>
       <div id="buttons">
