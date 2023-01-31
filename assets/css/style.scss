@@ -59,6 +59,26 @@ body {
   line-height: 1.3;
 }
 
+.card {
+  display: flex;
+  border: 1px solid var(--neutral-light-gray);
+  border-radius: 5px;
+  padding: 0.8rem;
+  margin-top: 0.7rem;
+  text-decoration: none;
+}
+
+.miniTitle {
+  color: var(--primary-marine-blue);
+  font-size: 1rem;
+  font-weight: var(--font-weight-700);
+}
+.miniSubTitle {
+  color: var(--neutral-cool-gray);
+  font-size: 0.8rem;
+  font-weight: var(--font-weight-500);
+}
+
 main {
   height: 100vh;
   #sidebar {
@@ -131,24 +151,19 @@ main {
   #plansInfos {
     #plansInfosContent {
       #plans {
-        .plan {
-          display: flex;
-          border: 1px solid var(--neutral-light-gray);
-          border-radius: 5px;
-          padding: 0.8rem;
-          margin-top: 0.7rem;
-          text-decoration: none;
+        #arcade,
+        #advanced,
+        #pro {
           .planIcon {
             padding-right: 0.8rem;
           }
           .planContent {
-            p {
-              color: var(--primary-marine-blue);
-              font-size: 1rem;
-              font-weight: var(--font-weight-500);
+            #yearlyPlan,
+            .freeMonths {
+              display: none;
             }
-            span {
-              color: var(--neutral-cool-gray);
+            .freeMonths {
+              color: var(--primary-marine-blue);
               font-size: 0.8rem;
               font-weight: var(--font-weight-500);
             }
@@ -225,10 +240,10 @@ main {
 
         @keyframes slideOff {
           0% {
-            transform: translateX(40px) scale(1);
+            transform: translateX(20px) scale(1);
           }
           50% {
-            transform: translateX(20px) scale(1.2);
+            transform: translateX(10px) scale(1.2);
           }
           100% {
             transform: translateX(0) scale(1);
