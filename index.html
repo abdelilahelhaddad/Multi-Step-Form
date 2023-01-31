@@ -89,7 +89,7 @@
           <h1 class="title">Select your plan</h1>
         <p class="description">You have the option of monthly or yearly billing.</p>
         <div id="plans">
-          <div id="arcade" class="plan">
+          <a href="#" id="arcade" class="plan">
             <div class="planIcon">
               <img src="assets/images/icon-arcade.svg" alt="">
             </div>
@@ -97,8 +97,8 @@
               <p>Arcade</p>
               <span id="monthlyPlan">$9/mo</span>
             </div>
-          </div>
-          <div id="advanced" class="plan">
+          </a>
+          <a href="#" id="advanced" class="plan">
             <div class="planIcon">
               <img src="assets/images/icon-advanced.svg" alt="">
             </div>
@@ -106,8 +106,8 @@
               <p>Advanced</p>
               <span id="monthlyPlan">$12/mo</span>
             </div>
-          </div>
-          <div id="pro" class="plan">
+          </a>
+          <a href="#" id="pro" class="plan">
             <div class="planIcon">
               <img src="assets/images/icon-pro.svg" alt="">
             </div>
@@ -115,13 +115,18 @@
               <p>Pro</p>
               <span id="monthlyPlan">$15/mo</span>
             </div>
-          </div>
+          </a>
         </div>
-        <!-- <div class="subscriptions">
-          <span>Monthly</span>
-
+        <div class="subscriptions">
+          <span class="selectedSubscription">Monthly</span>
+          <div class="toggle-container">
+            <input type="checkbox" id="sub" class="toggle">
+            <label for="sub" class="label">
+              <div class="circle"></div>
+            </label>
+          </div>
           <span>Yearly</span>
-        </div> -->
+        </div>
         </div>
       </div>
       <div id="buttons">

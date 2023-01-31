@@ -148,24 +148,122 @@ main #personalInfos #personalInfosContent input::placeholder {
   font-weight: var(--font-weight-700);
   color: var(--neutral-cool-gray);
 }
-main #plansInfos #plansInfosContent .plans .plan {
+main #plansInfos #plansInfosContent #plans .plan {
   display: flex;
-  border: 1px solid var(--primary-purplish-blue);
+  border: 1px solid var(--neutral-light-gray);
   border-radius: 5px;
   padding: 0.8rem;
+  margin-top: 0.7rem;
+  text-decoration: none;
 }
-main #plansInfos #plansInfosContent .plans .plan .planIcon {
+main #plansInfos #plansInfosContent #plans .plan .planIcon {
   padding-right: 0.8rem;
 }
-main #plansInfos #plansInfosContent .plans .plan .planContent p {
+main #plansInfos #plansInfosContent #plans .plan .planContent p {
   color: var(--primary-marine-blue);
   font-size: 1rem;
   font-weight: var(--font-weight-500);
 }
-main #plansInfos #plansInfosContent .plans .plan .planContent span {
+main #plansInfos #plansInfosContent #plans .plan .planContent span {
   color: var(--neutral-cool-gray);
   font-size: 0.8rem;
   font-weight: var(--font-weight-500);
+}
+main #plansInfos #plansInfosContent #plans .plan:focus {
+  border: 1px solid var(--primary-purplish-blue);
+  background-color: var(--primary-light-blue);
+}
+main #plansInfos #plansInfosContent .subscriptions {
+  display: flex;
+  justify-content: center;
+  background-color: var(--neutral-magnolia);
+  padding: 1rem;
+  margin-top: 1.5rem;
+  border-radius: 8px;
+  color: var(--neutral-cool-gray);
+  font-size: 1rem;
+  font-weight: var(--font-weight-500);
+}
+main #plansInfos #plansInfosContent .subscriptions .selectedSubscription {
+  color: var(--primary-marine-blue);
+}
+main #plansInfos #plansInfosContent .subscriptions .toggle-container {
+  display: flex;
+  align-items: center;
+}
+main #plansInfos #plansInfosContent .subscriptions .toggle {
+  visibility: hidden;
+}
+main #plansInfos #plansInfosContent .subscriptions .label {
+  position: relative;
+  background-color: var(--primary-marine-blue);
+  border-radius: 50px;
+  cursor: pointer;
+  display: inline-block;
+  margin: 0 15px 0 0;
+  width: 40px;
+  height: 20px;
+}
+main #plansInfos #plansInfosContent .subscriptions .circle {
+  background: #fff;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 3px;
+  align-items: center;
+  justify-content: center;
+  -webkit-animation: slideOff 0.3s linear forwards;
+          animation: slideOff 0.3s linear forwards;
+}
+main #plansInfos #plansInfosContent .subscriptions .toggle:checked + .label .circle {
+  -webkit-animation: slideOn 0.3s linear forwards;
+          animation: slideOn 0.3s linear forwards;
+}
+@-webkit-keyframes slideOn {
+  0% {
+    transform: translateX(0) scale(1);
+  }
+  50% {
+    transform: translateX(10px) scale(1.2);
+  }
+  100% {
+    transform: translateX(20px) scale(1);
+  }
+}
+@keyframes slideOn {
+  0% {
+    transform: translateX(0) scale(1);
+  }
+  50% {
+    transform: translateX(10px) scale(1.2);
+  }
+  100% {
+    transform: translateX(20px) scale(1);
+  }
+}
+@-webkit-keyframes slideOff {
+  0% {
+    transform: translateX(40px) scale(1);
+  }
+  50% {
+    transform: translateX(20px) scale(1.2);
+  }
+  100% {
+    transform: translateX(0) scale(1);
+  }
+}
+@keyframes slideOff {
+  0% {
+    transform: translateX(40px) scale(1);
+  }
+  50% {
+    transform: translateX(20px) scale(1.2);
+  }
+  100% {
+    transform: translateX(0) scale(1);
+  }
 }
 main #buttons {
   display: flex;
