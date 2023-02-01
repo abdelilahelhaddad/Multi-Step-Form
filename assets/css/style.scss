@@ -310,6 +310,32 @@ main {
       }
     }
   }
+  #finishingUpInfos {
+    #finishingUpInfosContent {
+      .finishingUp {
+        background-color: var(--primary-light-blue);
+        padding: 1rem;
+        border-radius: 5px;
+        .choosedPlan {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: 0.7rem;
+          .miniTitle {
+            margin-bottom: 0.4rem;
+          }
+        }
+        .choosedAddons {
+          margin-top: 0.7rem;
+          div {
+            display: flex;
+            justify-content: space-between;
+          }
+        }
+      }
+    }
+  }
+
   #buttons {
     display: flex;
     justify-content: space-between;

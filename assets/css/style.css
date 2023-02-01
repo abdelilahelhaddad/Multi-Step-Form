@@ -334,6 +334,27 @@ main #addonsInfos #addonsInfosContent #addons .card .yearlyAddon {
 main #addonsInfos #addonsInfosContent #addons .card .yearlyAddon {
   display: none;
 }
+main #finishingUpInfos #finishingUpInfosContent .finishingUp {
+  background-color: var(--primary-light-blue);
+  padding: 1rem;
+  border-radius: 5px;
+}
+main #finishingUpInfos #finishingUpInfosContent .finishingUp .choosedPlan {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.7rem;
+}
+main #finishingUpInfos #finishingUpInfosContent .finishingUp .choosedPlan .miniTitle {
+  margin-bottom: 0.4rem;
+}
+main #finishingUpInfos #finishingUpInfosContent .finishingUp .choosedAddons {
+  margin-top: 0.7rem;
+}
+main #finishingUpInfos #finishingUpInfosContent .finishingUp .choosedAddons div {
+  display: flex;
+  justify-content: space-between;
+}
 main #buttons {
   display: flex;
   justify-content: space-between;
