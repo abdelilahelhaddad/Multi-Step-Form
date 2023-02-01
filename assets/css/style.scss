@@ -53,6 +53,7 @@ body {
   font-size: 1.6rem;
   margin-bottom: 0.7rem;
 }
+
 .description {
   color: var(--neutral-cool-gray);
   font-size: 1rem;
@@ -66,6 +67,10 @@ body {
   padding: 0.8rem;
   margin-top: 0.7rem;
   text-decoration: none;
+  &:focus {
+    border: 1px solid var(--primary-purplish-blue);
+    background-color: var(--primary-light-blue);
+  }
 }
 
 .miniTitle {
@@ -73,6 +78,7 @@ body {
   font-size: 1rem;
   font-weight: var(--font-weight-700);
 }
+
 .miniSubTitle {
   color: var(--neutral-cool-gray);
   font-size: 0.8rem;
@@ -168,11 +174,6 @@ main {
               font-weight: var(--font-weight-500);
             }
           }
-
-          &:focus {
-            border: 1px solid var(--primary-purplish-blue);
-            background-color: var(--primary-light-blue);
-          }
         }
       }
       .subscriptions {
@@ -247,6 +248,63 @@ main {
           }
           100% {
             transform: translateX(0) scale(1);
+          }
+        }
+      }
+    }
+  }
+  #addonsInfos {
+    #addonsInfosContent {
+      #addons {
+        .card {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          #addon {
+            display: flex;
+            justify-content: center;
+            .addonIcon {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              input[type="checkbox"] {
+                display: none;
+              }
+
+              input[type="checkbox"] + label {
+                background: var(--neutral-white);
+                border: 1px solid var(--neutral-light-gray);
+                border-radius: 5px;
+                height: 24px;
+                width: 24px;
+                display: inline-block;
+                padding: 0 0 0 0px;
+                margin-right: 1rem;
+              }
+
+              input[type="checkbox"]:checked + label {
+                background-image: url("../images/icon-checkmark.svg");
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: 1rem;
+                background-color: var(--primary-purplish-blue);
+                border-radius: 5px;
+                height: 24px;
+                width: 24px;
+                display: inline-block;
+                padding: 0 0 0 0px;
+                margin-right: 1rem;
+              }
+            }
+          }
+          .monthlyAddon,
+          .yearlyAddon {
+            color: var(--primary-purplish-blue);
+            font-size: 0.8rem;
+            font-weight: var(--font-weight-500);
+          }
+          .yearlyAddon {
+            display: none;
           }
         }
       }

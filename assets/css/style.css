@@ -64,6 +64,10 @@ body {
   margin-top: 0.7rem;
   text-decoration: none;
 }
+.card:focus {
+  border: 1px solid var(--primary-purplish-blue);
+  background-color: var(--primary-light-blue);
+}
 
 .miniTitle {
   color: var(--primary-marine-blue);
@@ -189,12 +193,6 @@ main #plansInfos #plansInfosContent #plans #pro .planContent .freeMonths {
   font-size: 0.8rem;
   font-weight: var(--font-weight-500);
 }
-main #plansInfos #plansInfosContent #plans #arcade:focus,
-main #plansInfos #plansInfosContent #plans #advanced:focus,
-main #plansInfos #plansInfosContent #plans #pro:focus {
-  border: 1px solid var(--primary-purplish-blue);
-  background-color: var(--primary-light-blue);
-}
 main #plansInfos #plansInfosContent .subscriptions {
   display: flex;
   justify-content: center;
@@ -286,6 +284,55 @@ main #plansInfos #plansInfosContent .subscriptions .toggle:checked + .label .cir
   100% {
     transform: translateX(0) scale(1);
   }
+}
+main #addonsInfos #addonsInfosContent #addons .card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main #addonsInfos #addonsInfosContent #addons .card #addon {
+  display: flex;
+  justify-content: center;
+}
+main #addonsInfos #addonsInfosContent #addons .card #addon .addonIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main #addonsInfos #addonsInfosContent #addons .card #addon .addonIcon input[type=checkbox] {
+  display: none;
+}
+main #addonsInfos #addonsInfosContent #addons .card #addon .addonIcon input[type=checkbox] + label {
+  background: var(--neutral-white);
+  border: 1px solid var(--neutral-light-gray);
+  border-radius: 5px;
+  height: 24px;
+  width: 24px;
+  display: inline-block;
+  padding: 0 0 0 0px;
+  margin-right: 1rem;
+}
+main #addonsInfos #addonsInfosContent #addons .card #addon .addonIcon input[type=checkbox]:checked + label {
+  background-image: url("../images/icon-checkmark.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 1rem;
+  background-color: var(--primary-purplish-blue);
+  border-radius: 5px;
+  height: 24px;
+  width: 24px;
+  display: inline-block;
+  padding: 0 0 0 0px;
+  margin-right: 1rem;
+}
+main #addonsInfos #addonsInfosContent #addons .card .monthlyAddon,
+main #addonsInfos #addonsInfosContent #addons .card .yearlyAddon {
+  color: var(--primary-purplish-blue);
+  font-size: 0.8rem;
+  font-weight: var(--font-weight-500);
+}
+main #addonsInfos #addonsInfosContent #addons .card .yearlyAddon {
+  display: none;
 }
 main #buttons {
   display: flex;
