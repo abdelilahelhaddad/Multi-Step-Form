@@ -312,8 +312,12 @@ main {
   }
   #finishingUpInfos {
     #finishingUpInfosContent {
+      padding: 2rem 1.5rem 1rem;
+      .description {
+        margin-bottom: 1rem;
+      }
       .finishingUp {
-        background-color: var(--primary-light-blue);
+        background-color: rgba(191, 226, 253, 0.3);
         padding: 1rem;
         border-radius: 5px;
         .choosedPlan {
@@ -322,15 +326,33 @@ main {
           align-items: center;
           margin-bottom: 0.7rem;
           .miniTitle {
-            margin-bottom: 0.4rem;
+            margin-bottom: 0.2rem;
+          }
+          a.miniSubTitle {
+            text-decoration: underline;
           }
         }
         .choosedAddons {
-          margin-top: 0.7rem;
           div {
             display: flex;
             justify-content: space-between;
+            margin-top: 0.7rem;
+            .finishingUpPrice {
+              color: var(--primary-marine-blue);
+              font-size: 01rem;
+              font-weight: var(--font-weight-400);
+            }
           }
+        }
+      }
+      .total {
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem;
+        .totalPrice {
+          color: var(--primary-purplish-blue);
+          font-size: 1rem;
+          font-weight: var(--font-weight-700);
         }
       }
     }
@@ -357,6 +379,11 @@ main {
     }
     #nextStep {
       background-color: var(--primary-marine-blue);
+      color: var(--neutral-alabaster);
+      display: none;
+    }
+    #confirm {
+      background-color: var(--primary-purplish-blue);
       color: var(--neutral-alabaster);
     }
   }
