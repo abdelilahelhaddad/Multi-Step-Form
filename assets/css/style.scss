@@ -31,6 +31,10 @@ body {
   font-weight: var(--font-weight-400);
 }
 
+.hidden {
+  display: none;
+}
+
 .blueBackground {
   position: relative;
   height: 60%;
@@ -118,13 +122,7 @@ main {
         color: var(--primary-marine-blue) !important;
         border: none !important;
       }
-      #stepContent {
-        display: none;
-      }
     }
-  }
-  .activeContent {
-    display: none;
   }
   #personalInfos {
     #personalInfosContent {
@@ -164,10 +162,6 @@ main {
             padding-right: 0.8rem;
           }
           .planContent {
-            #yearlyPlan,
-            .freeMonths {
-              display: none;
-            }
             .freeMonths {
               color: var(--primary-marine-blue);
               font-size: 0.8rem;
@@ -303,9 +297,6 @@ main {
             font-size: 0.8rem;
             font-weight: var(--font-weight-500);
           }
-          .yearlyAddon {
-            display: none;
-          }
         }
       }
     }
@@ -357,7 +348,17 @@ main {
       }
     }
   }
-
+  #thankYou {
+    #thankYouContent {
+      text-align: center;
+      img {
+        margin-bottom: 1rem;
+      }
+      .description {
+        font-size: 1.2rem;
+      }
+    }
+  }
   #buttons {
     display: flex;
     justify-content: space-between;
@@ -380,7 +381,6 @@ main {
     #nextStep {
       background-color: var(--primary-marine-blue);
       color: var(--neutral-alabaster);
-      display: none;
     }
     #confirm {
       background-color: var(--primary-purplish-blue);

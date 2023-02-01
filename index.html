@@ -19,34 +19,34 @@
       <div id="sidebar">
         <div id="stepOne">
           <div id="stepOneNum" class="active">1</div>
-          <div id="stepContent">
+          <div id="stepContent" class="hidden">
             <div id="stepSubTitle">Step 1</div>
             <div id="stepTitle">Your info</div>
           </div>
         </div>
         <div id="stepTwo">
           <div id="stepTwoNum">2</div>
-          <div id="stepContent">
+          <div id="stepContent" class="hidden">
             <div id="stepSubTitle">Step 2</div>
             <div id="stepTitle">Select plan</div>
           </div>
         </div>
         <div id="stepThree">
           <div id="stepThreeNum">3</div>
-          <div id="stepContent">
+          <div id="stepContent" class="hidden">
             <div id="stepSubTitle">Step 3</div>
             <div id="stepTitle">Add-ons</div>
           </div>
         </div>
         <div id="stepFour">
           <div id="stepFourNum">4</div>
-          <div id="stepContent">
+          <div id="stepContent" class="hidden">
             <div id="stepSubTitle">Step 4</div>
             <div id="stepTitle">Summary</div>
           </div>
         </div>
       </div>
-      <div id="personalInfos" class="activeContent blueBackground">
+      <div id="personalInfos" class="hidden blueBackground">
         <div id="personalInfosContent" class="contentBackground">
           <h1 class="title">Personal info</h1>
         <p class="description">Please provide your name, email address, and phone number.</p>
@@ -84,7 +84,7 @@
         </form>
         </div>
       </div>
-      <div id="plansInfos" class="activeContent blueBackground">
+      <div id="plansInfos" class="hidden blueBackground">
         <div id="plansInfosContent" class="contentBackground">
           <h1 class="title">Select your plan</h1>
         <p class="description">You have the option of monthly or yearly billing.</p>
@@ -96,8 +96,8 @@
             <div class="planContent">
               <p class="miniTitle">Arcade</p>
               <span id="monthlyPlan" class="miniSubTitle">$9/mo</span>
-              <span id="yearlyPlan" class="miniSubTitle">$90/yr</span>
-              <p class="freeMonths">2 months free</p>
+              <span id="yearlyPlan" class="miniSubTitle hidden">$90/yr</span>
+              <p class="freeMonths hidden">2 months free</p>
             </div>
           </a>
           <a href="#" id="advanced" class="card">
@@ -107,8 +107,8 @@
             <div class="planContent">
               <p class="miniTitle">Advanced</p>
               <span id="monthlyPlan" class="miniSubTitle">$12/mo</span>
-              <span id="yearlyPlan" class="miniSubTitle">$120/yr</span>
-              <p class="freeMonths">2 months free</p>
+              <span id="yearlyPlan" class="miniSubTitle hidden">$120/yr</span>
+              <p class="freeMonths hidden">2 months free</p>
             </div>
           </a>
           <a href="#" id="pro" class="card">
@@ -118,8 +118,8 @@
             <div class="planContent">
               <p class="miniTitle">Pro</p>
               <span id="monthlyPlan" class="miniSubTitle">$15/mo</span>
-              <span id="yearlyPlan" class="miniSubTitle">$150/yr</span>
-              <p class="freeMonths">2 months free</p>
+              <span id="yearlyPlan" class="miniSubTitle hidden">$150/yr</span>
+              <p class="freeMonths hidden">2 months free</p>
             </div>
           </a>
         </div>
@@ -136,14 +136,14 @@
         </div>
       </div>
 
-      <div id="addonsInfos" class="activeContent blueBackground">
+      <div id="addonsInfos" class="hidden blueBackground">
         <div id="addonsInfosContent" class="contentBackground">
           <h1 class="title">Pick add-ons</h1>
         <p class="description">Add-ons help enhance your gaming experience.</p>
         <div id="addons">
           <a href="#" class="card">
             <div id="addon">
-              <div class="addonIcon">
+              <div class="addonIcon hidden">
                 <input type='checkbox' name='addonCkb1' id="addonCkb1"/><label for="addonCkb1"></label>
               </div>
               <div class="addonContent">
@@ -152,11 +152,11 @@
               </div>
             </div>
             <div class="monthlyAddon">+$1/mo</div>
-            <div class="yearlyAddon">+$10/yr</div>
+            <div class="yearlyAddon hidden">+$10/yr</div>
           </a>
           <a href="#" class="card">
             <div id="addon">
-              <div class="addonIcon">
+              <div class="addonIcon hidden">
                 <input type='checkbox' name='addonCkb2' id="addonCkb2"/><label for="addonCkb2"></label>
               </div>
               <div class="addonContent">
@@ -165,11 +165,11 @@
               </div>
             </div>
             <div class="monthlyAddon">+$2/mo</div>
-            <div class="yearlyAddon">+$20/yr</div>
+            <div class="yearlyAddon hidden">+$20/yr</div>
           </a>
           <a href="#" class="card">
             <div id="addon">
-              <div class="addonIcon">
+              <div class="addonIcon hidden">
                 <input type='checkbox' name='addonCkb3' id="addonCkb3"/><label for="addonCkb3"></label>
               </div>
               <div class="addonContent">
@@ -178,12 +178,12 @@
               </div>
             </div>
             <div class="monthlyAddon">+$2/mo</div>
-            <div class="yearlyAddon">+$20/yr</div>
+            <div class="yearlyAddon hidden">+$20/yr</div>
           </a>
         </div>
         </div>
       </div>
-      <div id="finishingUpInfos" class="blueBackground">
+      <div id="finishingUpInfos" class="hidden blueBackground">
         <div id="finishingUpInfosContent" class="contentBackground">
           <h1 class="title">Finishing up</h1>
         <p class="description">Double-check everything looks OK before confirming.</p>
@@ -195,29 +195,41 @@
               <a class="miniSubTitle">Change</a>
             </div>
             <span class="miniTitle">$9/mo</span>
+            <span class="miniTitle hidden">$90/yr</span>
           </div>
           <hr />
           <div class="choosedAddons">
             <div>
               <p class="miniSubTitle">Online service</p>
               <span class="finishingUpPrice">+$1/mo</span>
+              <span class="finishingUpPrice hidden">+$10/yr</span>
             </div>
             <div>
               <p class="miniSubTitle">Larger storage</p>
               <span class="finishingUpPrice">+$2/mo</span>
+              <span class="finishingUpPrice hidden">+$20/yr</span>
             </div>
           </div>
         </div>
         <div class="total">
           <p class="miniSubTitle">Total (per month)</p>
+          <p class="miniSubTitle hidden">Total (per year)</p>
           <span class="totalPrice">+$12/mo</span>
+          <span class="totalPrice hidden">+$120/yr</span>
         </div>    
+        </div>
+      </div>
+      <div id="thankYou" class="blueBackground">
+        <div id="thankYouContent" class="contentBackground">
+          <img src="./assets/images/icon-thank-you.svg" width="60px" alt="">
+          <h1 class="title">Thank you!</h1>
+        <p class="description">Thanks for confirming your subscription! We hope you have fun using our platform. If you ever need support, please feel free to email us at support@loremgaming.com.</p>
         </div>
       </div>
 
       <div id="buttons">
         <button id="goBack" class="button">Go Back</button>
-        <button id="nextStep" class="button">Next Step</button>
+        <button id="nextStep" class="button hidden">Next Step</button>
         <button id="confirm" class="button">Confirm</button>
       </div>
     </div>

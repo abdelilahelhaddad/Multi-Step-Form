@@ -27,6 +27,10 @@ body {
   font-weight: var(--font-weight-400);
 }
 
+.hidden {
+  display: none;
+}
+
 .blueBackground {
   position: relative;
   height: 60%;
@@ -132,15 +136,6 @@ main #sidebar #stepFour .active {
   color: var(--primary-marine-blue) !important;
   border: none !important;
 }
-main #sidebar #stepOne #stepContent,
-main #sidebar #stepTwo #stepContent,
-main #sidebar #stepThree #stepContent,
-main #sidebar #stepFour #stepContent {
-  display: none;
-}
-main .activeContent {
-  display: none;
-}
 main #personalInfos #personalInfosContent label {
   color: var(--primary-marine-blue);
   font-size: 0.8rem;
@@ -177,14 +172,6 @@ main #plansInfos #plansInfosContent #plans #arcade .planIcon,
 main #plansInfos #plansInfosContent #plans #advanced .planIcon,
 main #plansInfos #plansInfosContent #plans #pro .planIcon {
   padding-right: 0.8rem;
-}
-main #plansInfos #plansInfosContent #plans #arcade .planContent #yearlyPlan,
-main #plansInfos #plansInfosContent #plans #arcade .planContent .freeMonths,
-main #plansInfos #plansInfosContent #plans #advanced .planContent #yearlyPlan,
-main #plansInfos #plansInfosContent #plans #advanced .planContent .freeMonths,
-main #plansInfos #plansInfosContent #plans #pro .planContent #yearlyPlan,
-main #plansInfos #plansInfosContent #plans #pro .planContent .freeMonths {
-  display: none;
 }
 main #plansInfos #plansInfosContent #plans #arcade .planContent .freeMonths,
 main #plansInfos #plansInfosContent #plans #advanced .planContent .freeMonths,
@@ -331,9 +318,6 @@ main #addonsInfos #addonsInfosContent #addons .card .yearlyAddon {
   font-size: 0.8rem;
   font-weight: var(--font-weight-500);
 }
-main #addonsInfos #addonsInfosContent #addons .card .yearlyAddon {
-  display: none;
-}
 main #finishingUpInfos #finishingUpInfosContent {
   padding: 2rem 1.5rem 1rem;
 }
@@ -377,6 +361,15 @@ main #finishingUpInfos #finishingUpInfosContent .total .totalPrice {
   font-size: 1rem;
   font-weight: var(--font-weight-700);
 }
+main #thankYou #thankYouContent {
+  text-align: center;
+}
+main #thankYou #thankYouContent img {
+  margin-bottom: 1rem;
+}
+main #thankYou #thankYouContent .description {
+  font-size: 1.2rem;
+}
 main #buttons {
   display: flex;
   justify-content: space-between;
@@ -399,7 +392,6 @@ main #buttons #goBack {
 main #buttons #nextStep {
   background-color: var(--primary-marine-blue);
   color: var(--neutral-alabaster);
-  display: none;
 }
 main #buttons #confirm {
   background-color: var(--primary-purplish-blue);
