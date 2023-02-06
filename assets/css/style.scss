@@ -104,9 +104,10 @@ main {
     display: flex;
     flex-direction: column;
     border-radius: 5px;
-    div {
-      position: absolute;
+    padding: 1.5rem;
+    > div {
       display: flex;
+      margin-bottom: 1.3rem;
       #stepOneNum,
       #stepTwoNum,
       #stepThreeNum,
@@ -116,10 +117,26 @@ main {
         align-items: center;
         color: var(--neutral-alabaster);
         border: 2px solid var(--neutral-alabaster);
-        width: 2rem;
-        height: 2rem;
+        width: 1.8rem;
+        height: 1.8rem;
         border-radius: 50%;
         font-weight: var(--font-weight-500);
+      }
+      #stepContent {
+        display: flex;
+        flex-direction: column;
+        margin-left: 1rem;
+        #stepSubTitle {
+          color: var(--neutral-cool-gray);
+          text-transform: uppercase;
+          font-size: 0.7rem;
+        }
+        #stepTitle {
+          color: var(--neutral-white);
+          text-transform: uppercase;
+          font-weight: var(--font-weight-500);
+          font-size: 0.9rem;
+        }
       }
     }
   }
@@ -135,7 +152,7 @@ main {
           margin-top: 1.5rem;
         }
         form .inputInfo {
-          margin-top: 0.7rem;
+          margin-top: 1rem;
         }
         input {
           width: 100%;
@@ -145,7 +162,7 @@ main {
           padding: 10px 15px;
           font-weight: var(--font-weight-700);
           color: var(--primary-marine-blue);
-          margin-top: 0.2rem;
+          margin-top: 0.3rem;
           &:focus {
             border: 1px solid var(--primary-purplish-blue);
           }
@@ -162,7 +179,7 @@ main {
       align-items: center;
       font-weight: var(--font-weight-500);
       padding: 0 5%;
-      margin-top: 2.5rem;
+      margin-top: 3rem;
       background-color: var(--neutral-white);
       .button {
         border: none;

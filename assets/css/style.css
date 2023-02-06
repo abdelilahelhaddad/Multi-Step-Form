@@ -101,24 +101,41 @@ main #sidebar {
   display: flex;
   flex-direction: column;
   border-radius: 5px;
+  padding: 1.5rem;
 }
-main #sidebar div {
-  position: absolute;
+main #sidebar > div {
   display: flex;
+  margin-bottom: 1.3rem;
 }
-main #sidebar div #stepOneNum,
-main #sidebar div #stepTwoNum,
-main #sidebar div #stepThreeNum,
-main #sidebar div #stepFourNum {
+main #sidebar > div #stepOneNum,
+main #sidebar > div #stepTwoNum,
+main #sidebar > div #stepThreeNum,
+main #sidebar > div #stepFourNum {
   display: inline-flex;
   justify-content: center;
   align-items: center;
   color: var(--neutral-alabaster);
   border: 2px solid var(--neutral-alabaster);
-  width: 2rem;
-  height: 2rem;
+  width: 1.8rem;
+  height: 1.8rem;
   border-radius: 50%;
   font-weight: var(--font-weight-500);
+}
+main #sidebar > div #stepContent {
+  display: flex;
+  flex-direction: column;
+  margin-left: 1rem;
+}
+main #sidebar > div #stepContent #stepSubTitle {
+  color: var(--neutral-cool-gray);
+  text-transform: uppercase;
+  font-size: 0.7rem;
+}
+main #sidebar > div #stepContent #stepTitle {
+  color: var(--neutral-white);
+  text-transform: uppercase;
+  font-weight: var(--font-weight-500);
+  font-size: 0.9rem;
 }
 main .fullContent {
   padding: 0 3.5rem;
@@ -131,7 +148,7 @@ main .fullContent #personalInfos #personalInfosContent form {
   margin-top: 1.5rem;
 }
 main .fullContent #personalInfos #personalInfosContent form .inputInfo {
-  margin-top: 0.7rem;
+  margin-top: 1rem;
 }
 main .fullContent #personalInfos #personalInfosContent input {
   width: 100%;
@@ -141,7 +158,7 @@ main .fullContent #personalInfos #personalInfosContent input {
   padding: 10px 15px;
   font-weight: var(--font-weight-700);
   color: var(--primary-marine-blue);
-  margin-top: 0.2rem;
+  margin-top: 0.3rem;
 }
 main .fullContent #personalInfos #personalInfosContent input:focus {
   border: 1px solid var(--primary-purplish-blue);
@@ -164,7 +181,7 @@ main .fullContent #buttons {
   align-items: center;
   font-weight: var(--font-weight-500);
   padding: 0 5%;
-  margin-top: 2.5rem;
+  margin-top: 3rem;
   background-color: var(--neutral-white);
 }
 main .fullContent #buttons .button {
