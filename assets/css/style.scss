@@ -29,26 +29,27 @@ body {
   font-family: "Ubuntu", sans-serif;
   font-size: 16px;
   font-weight: var(--font-weight-400);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .hidden {
   display: none;
 }
 
+.activeCircle {
+  background-color: var(--primary-light-blue) !important;
+  color: var(--primary-marine-blue) !important;
+  border: none !important;
+}
+
 .blueBackground {
-  position: relative;
-  height: 60%;
   background-color: var(--primary-light-blue);
 }
 
 .contentBackground {
-  position: absolute;
-  top: -16%;
-  left: 5%;
-  right: 5%;
-  z-index: 2;
-  background-color: var(--neutral-alabaster);
-  border-radius: 10px;
   padding: 2rem 1.5rem;
 }
 
@@ -90,18 +91,21 @@ body {
 }
 
 main {
-  height: 100vh;
+  background-color: var(--neutral-white);
+  display: flex;
+  border-radius: 10px;
+  padding: 0.7rem;
   #sidebar {
-    background-image: url("../images/bg-sidebar-mobile.svg");
+    background-image: url("../images/bg-sidebar-desktop.svg");
+    background-repeat: no-repeat;
     background-size: cover;
-    height: 27%;
+    position: relative;
+    width: 200px;
     display: flex;
-    justify-content: space-evenly;
-    padding: 2rem 5rem;
-    #stepOne,
-    #stepTwo,
-    #stepThree,
-    #stepFour {
+    flex-direction: column;
+    border-radius: 5px;
+    div {
+      position: absolute;
       display: flex;
       #stepOneNum,
       #stepTwoNum,
@@ -117,274 +121,70 @@ main {
         border-radius: 50%;
         font-weight: var(--font-weight-500);
       }
-      .active {
-        background-color: var(--primary-light-blue) !important;
-        color: var(--primary-marine-blue) !important;
-        border: none !important;
-      }
     }
   }
-  #personalInfos {
-    #personalInfosContent {
-      label {
-        color: var(--primary-marine-blue);
-        font-size: 0.8rem;
-      }
-      form .inputInfo {
-        margin-top: 0.7rem;
-      }
-      input {
-        width: 100%;
-        border: 1px solid var(--neutral-light-gray);
-        outline: none;
-        border-radius: 5px;
-        padding: 10px 15px;
-        font-weight: var(--font-weight-700);
-        color: var(--primary-marine-blue);
-        margin-top: 0.2rem;
-        &:focus {
-          border: 1px solid var(--primary-purplish-blue);
-        }
-        &::placeholder {
-          font-weight: var(--font-weight-700);
-          color: var(--neutral-cool-gray);
-        }
-      }
-    }
-  }
-  #plansInfos {
-    #plansInfosContent {
-      #plans {
-        #arcade,
-        #advanced,
-        #pro {
-          .planIcon {
-            padding-right: 0.8rem;
-          }
-          .planContent {
-            .freeMonths {
-              color: var(--primary-marine-blue);
-              font-size: 0.8rem;
-              font-weight: var(--font-weight-500);
-            }
-          }
-        }
-      }
-      .subscriptions {
-        display: flex;
-        justify-content: center;
-        background-color: var(--neutral-magnolia);
-        padding: 1rem;
-        margin-top: 1.5rem;
-        border-radius: 8px;
-        color: var(--neutral-cool-gray);
-        font-size: 1rem;
-        font-weight: var(--font-weight-500);
-        .selectedSubscription {
+  .fullContent {
+    padding: 0 3.5rem;
+    #personalInfos {
+      #personalInfosContent {
+        label {
           color: var(--primary-marine-blue);
+          font-size: 0.8rem;
         }
-
-        .toggle-container {
-          display: flex;
-          align-items: center;
+        form {
+          margin-top: 1.5rem;
         }
-
-        .toggle {
-          visibility: hidden;
+        form .inputInfo {
+          margin-top: 0.7rem;
         }
-
-        .label {
-          position: relative;
-          background-color: var(--primary-marine-blue);
-          border-radius: 50px;
-          cursor: pointer;
-          display: inline-block;
-          margin: 0 15px 0 0;
-          width: 40px;
-          height: 20px;
-        }
-
-        .circle {
-          background: #fff;
-          height: 16px;
-          width: 16px;
-          border-radius: 50%;
-          position: absolute;
-          top: 2px;
-          left: 3px;
-          align-items: center;
-          justify-content: center;
-          animation: slideOff 0.3s linear forwards;
-        }
-
-        .toggle:checked + .label .circle {
-          animation: slideOn 0.3s linear forwards;
-        }
-
-        @keyframes slideOn {
-          0% {
-            transform: translateX(0) scale(1);
-          }
-          50% {
-            transform: translateX(10px) scale(1.2);
-          }
-          100% {
-            transform: translateX(20px) scale(1);
-          }
-        }
-
-        @keyframes slideOff {
-          0% {
-            transform: translateX(20px) scale(1);
-          }
-          50% {
-            transform: translateX(10px) scale(1.2);
-          }
-          100% {
-            transform: translateX(0) scale(1);
-          }
-        }
-      }
-    }
-  }
-  #addonsInfos {
-    #addonsInfosContent {
-      #addons {
-        .card {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          #addon {
-            display: flex;
-            justify-content: center;
-            .addonIcon {
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              input[type="checkbox"] {
-                display: none;
-              }
-
-              input[type="checkbox"] + label {
-                background: var(--neutral-white);
-                border: 1px solid var(--neutral-light-gray);
-                border-radius: 5px;
-                height: 24px;
-                width: 24px;
-                display: inline-block;
-                padding: 0 0 0 0px;
-                margin-right: 1rem;
-              }
-
-              input[type="checkbox"]:checked + label {
-                background-image: url("../images/icon-checkmark.svg");
-                background-repeat: no-repeat;
-                background-position: center;
-                background-size: 1rem;
-                background-color: var(--primary-purplish-blue);
-                border-radius: 5px;
-                height: 24px;
-                width: 24px;
-                display: inline-block;
-                padding: 0 0 0 0px;
-                margin-right: 1rem;
-              }
-            }
-          }
-          .monthlyAddon,
-          .yearlyAddon {
-            color: var(--primary-purplish-blue);
-            font-size: 0.8rem;
-            font-weight: var(--font-weight-500);
-          }
-        }
-      }
-    }
-  }
-  #finishingUpInfos {
-    #finishingUpInfosContent {
-      padding: 2rem 1.5rem 1rem;
-      .description {
-        margin-bottom: 1rem;
-      }
-      .finishingUp {
-        background-color: rgba(191, 226, 253, 0.3);
-        padding: 1rem;
-        border-radius: 5px;
-        .choosedPlan {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          margin-bottom: 0.7rem;
-          .miniTitle {
-            margin-bottom: 0.2rem;
-          }
-          a.miniSubTitle {
-            text-decoration: underline;
-          }
-        }
-        .choosedAddons {
-          div {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 0.7rem;
-            .finishingUpPrice {
-              color: var(--primary-marine-blue);
-              font-size: 01rem;
-              font-weight: var(--font-weight-400);
-            }
-          }
-        }
-      }
-      .total {
-        display: flex;
-        justify-content: space-between;
-        padding: 1rem;
-        .totalPrice {
-          color: var(--primary-purplish-blue);
-          font-size: 1rem;
+        input {
+          width: 100%;
+          border: 1px solid var(--neutral-light-gray);
+          outline: none;
+          border-radius: 5px;
+          padding: 10px 15px;
           font-weight: var(--font-weight-700);
+          color: var(--primary-marine-blue);
+          margin-top: 0.2rem;
+          &:focus {
+            border: 1px solid var(--primary-purplish-blue);
+          }
+          &::placeholder {
+            font-weight: var(--font-weight-700);
+            color: var(--neutral-cool-gray);
+          }
         }
       }
     }
-  }
-  #thankYou {
-    #thankYouContent {
-      text-align: center;
-      img {
-        margin-bottom: 1rem;
-      }
-      .description {
-        font-size: 1.2rem;
-      }
-    }
-  }
-  #buttons {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 13%;
-    font-weight: var(--font-weight-500);
-    padding: 0 5%;
-    .button {
-      border: none;
-      border-radius: 5px;
-      outline: none;
-      font-weight: var(--font-weight-700);
-      padding: 0.8rem 1rem;
-    }
-    #goBack {
-      // visibility: hidden;
+    #buttons {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: var(--font-weight-500);
+      padding: 0 5%;
+      margin-top: 2.5rem;
       background-color: var(--neutral-white);
-      color: var(--neutral-cool-gray);
-    }
-    #nextStep {
-      background-color: var(--primary-marine-blue);
-      color: var(--neutral-alabaster);
-    }
-    #confirm {
-      background-color: var(--primary-purplish-blue);
-      color: var(--neutral-alabaster);
+      .button {
+        border: none;
+        border-radius: 5px;
+        outline: none;
+        font-weight: var(--font-weight-700);
+        padding: 0.8rem 1rem;
+        cursor: pointer;
+      }
+      #goBack {
+        // visibility: hidden;
+        background-color: var(--neutral-white);
+        color: var(--neutral-cool-gray);
+      }
+      #nextStep {
+        background-color: var(--primary-marine-blue);
+        color: var(--neutral-alabaster);
+      }
+      #confirm {
+        background-color: var(--primary-purplish-blue);
+        color: var(--neutral-alabaster);
+      }
     }
   }
 }

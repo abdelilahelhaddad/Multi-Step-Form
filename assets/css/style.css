@@ -25,26 +25,27 @@ body {
   font-family: "Ubuntu", sans-serif;
   font-size: 16px;
   font-weight: var(--font-weight-400);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .hidden {
   display: none;
 }
 
+.activeCircle {
+  background-color: var(--primary-light-blue) !important;
+  color: var(--primary-marine-blue) !important;
+  border: none !important;
+}
+
 .blueBackground {
-  position: relative;
-  height: 60%;
   background-color: var(--primary-light-blue);
 }
 
 .contentBackground {
-  position: absolute;
-  top: -16%;
-  left: 5%;
-  right: 5%;
-  z-index: 2;
-  background-color: var(--neutral-alabaster);
-  border-radius: 10px;
   padding: 2rem 1.5rem;
 }
 
@@ -86,38 +87,29 @@ body {
 }
 
 main {
-  height: 100vh;
+  background-color: var(--neutral-white);
+  display: flex;
+  border-radius: 10px;
+  padding: 0.7rem;
 }
 main #sidebar {
-  background-image: url("../images/bg-sidebar-mobile.svg");
+  background-image: url("../images/bg-sidebar-desktop.svg");
+  background-repeat: no-repeat;
   background-size: cover;
-  height: 27%;
+  position: relative;
+  width: 200px;
   display: flex;
-  justify-content: space-evenly;
-  padding: 2rem 5rem;
+  flex-direction: column;
+  border-radius: 5px;
 }
-main #sidebar #stepOne,
-main #sidebar #stepTwo,
-main #sidebar #stepThree,
-main #sidebar #stepFour {
+main #sidebar div {
+  position: absolute;
   display: flex;
 }
-main #sidebar #stepOne #stepOneNum,
-main #sidebar #stepOne #stepTwoNum,
-main #sidebar #stepOne #stepThreeNum,
-main #sidebar #stepOne #stepFourNum,
-main #sidebar #stepTwo #stepOneNum,
-main #sidebar #stepTwo #stepTwoNum,
-main #sidebar #stepTwo #stepThreeNum,
-main #sidebar #stepTwo #stepFourNum,
-main #sidebar #stepThree #stepOneNum,
-main #sidebar #stepThree #stepTwoNum,
-main #sidebar #stepThree #stepThreeNum,
-main #sidebar #stepThree #stepFourNum,
-main #sidebar #stepFour #stepOneNum,
-main #sidebar #stepFour #stepTwoNum,
-main #sidebar #stepFour #stepThreeNum,
-main #sidebar #stepFour #stepFourNum {
+main #sidebar div #stepOneNum,
+main #sidebar div #stepTwoNum,
+main #sidebar div #stepThreeNum,
+main #sidebar div #stepFourNum {
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -128,22 +120,20 @@ main #sidebar #stepFour #stepFourNum {
   border-radius: 50%;
   font-weight: var(--font-weight-500);
 }
-main #sidebar #stepOne .active,
-main #sidebar #stepTwo .active,
-main #sidebar #stepThree .active,
-main #sidebar #stepFour .active {
-  background-color: var(--primary-light-blue) !important;
-  color: var(--primary-marine-blue) !important;
-  border: none !important;
+main .fullContent {
+  padding: 0 3.5rem;
 }
-main #personalInfos #personalInfosContent label {
+main .fullContent #personalInfos #personalInfosContent label {
   color: var(--primary-marine-blue);
   font-size: 0.8rem;
 }
-main #personalInfos #personalInfosContent form .inputInfo {
+main .fullContent #personalInfos #personalInfosContent form {
+  margin-top: 1.5rem;
+}
+main .fullContent #personalInfos #personalInfosContent form .inputInfo {
   margin-top: 0.7rem;
 }
-main #personalInfos #personalInfosContent input {
+main .fullContent #personalInfos #personalInfosContent input {
   width: 100%;
   border: 1px solid var(--neutral-light-gray);
   outline: none;
@@ -153,247 +143,47 @@ main #personalInfos #personalInfosContent input {
   color: var(--primary-marine-blue);
   margin-top: 0.2rem;
 }
-main #personalInfos #personalInfosContent input:focus {
+main .fullContent #personalInfos #personalInfosContent input:focus {
   border: 1px solid var(--primary-purplish-blue);
 }
-main #personalInfos #personalInfosContent input::-moz-placeholder {
+main .fullContent #personalInfos #personalInfosContent input::-moz-placeholder {
   font-weight: var(--font-weight-700);
   color: var(--neutral-cool-gray);
 }
-main #personalInfos #personalInfosContent input:-ms-input-placeholder {
+main .fullContent #personalInfos #personalInfosContent input:-ms-input-placeholder {
   font-weight: var(--font-weight-700);
   color: var(--neutral-cool-gray);
 }
-main #personalInfos #personalInfosContent input::placeholder {
+main .fullContent #personalInfos #personalInfosContent input::placeholder {
   font-weight: var(--font-weight-700);
   color: var(--neutral-cool-gray);
 }
-main #plansInfos #plansInfosContent #plans #arcade .planIcon,
-main #plansInfos #plansInfosContent #plans #advanced .planIcon,
-main #plansInfos #plansInfosContent #plans #pro .planIcon {
-  padding-right: 0.8rem;
-}
-main #plansInfos #plansInfosContent #plans #arcade .planContent .freeMonths,
-main #plansInfos #plansInfosContent #plans #advanced .planContent .freeMonths,
-main #plansInfos #plansInfosContent #plans #pro .planContent .freeMonths {
-  color: var(--primary-marine-blue);
-  font-size: 0.8rem;
-  font-weight: var(--font-weight-500);
-}
-main #plansInfos #plansInfosContent .subscriptions {
-  display: flex;
-  justify-content: center;
-  background-color: var(--neutral-magnolia);
-  padding: 1rem;
-  margin-top: 1.5rem;
-  border-radius: 8px;
-  color: var(--neutral-cool-gray);
-  font-size: 1rem;
-  font-weight: var(--font-weight-500);
-}
-main #plansInfos #plansInfosContent .subscriptions .selectedSubscription {
-  color: var(--primary-marine-blue);
-}
-main #plansInfos #plansInfosContent .subscriptions .toggle-container {
-  display: flex;
-  align-items: center;
-}
-main #plansInfos #plansInfosContent .subscriptions .toggle {
-  visibility: hidden;
-}
-main #plansInfos #plansInfosContent .subscriptions .label {
-  position: relative;
-  background-color: var(--primary-marine-blue);
-  border-radius: 50px;
-  cursor: pointer;
-  display: inline-block;
-  margin: 0 15px 0 0;
-  width: 40px;
-  height: 20px;
-}
-main #plansInfos #plansInfosContent .subscriptions .circle {
-  background: #fff;
-  height: 16px;
-  width: 16px;
-  border-radius: 50%;
-  position: absolute;
-  top: 2px;
-  left: 3px;
-  align-items: center;
-  justify-content: center;
-  -webkit-animation: slideOff 0.3s linear forwards;
-          animation: slideOff 0.3s linear forwards;
-}
-main #plansInfos #plansInfosContent .subscriptions .toggle:checked + .label .circle {
-  -webkit-animation: slideOn 0.3s linear forwards;
-          animation: slideOn 0.3s linear forwards;
-}
-@-webkit-keyframes slideOn {
-  0% {
-    transform: translateX(0) scale(1);
-  }
-  50% {
-    transform: translateX(10px) scale(1.2);
-  }
-  100% {
-    transform: translateX(20px) scale(1);
-  }
-}
-@keyframes slideOn {
-  0% {
-    transform: translateX(0) scale(1);
-  }
-  50% {
-    transform: translateX(10px) scale(1.2);
-  }
-  100% {
-    transform: translateX(20px) scale(1);
-  }
-}
-@-webkit-keyframes slideOff {
-  0% {
-    transform: translateX(20px) scale(1);
-  }
-  50% {
-    transform: translateX(10px) scale(1.2);
-  }
-  100% {
-    transform: translateX(0) scale(1);
-  }
-}
-@keyframes slideOff {
-  0% {
-    transform: translateX(20px) scale(1);
-  }
-  50% {
-    transform: translateX(10px) scale(1.2);
-  }
-  100% {
-    transform: translateX(0) scale(1);
-  }
-}
-main #addonsInfos #addonsInfosContent #addons .card {
+main .fullContent #buttons {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-main #addonsInfos #addonsInfosContent #addons .card #addon {
-  display: flex;
-  justify-content: center;
-}
-main #addonsInfos #addonsInfosContent #addons .card #addon .addonIcon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-main #addonsInfos #addonsInfosContent #addons .card #addon .addonIcon input[type=checkbox] {
-  display: none;
-}
-main #addonsInfos #addonsInfosContent #addons .card #addon .addonIcon input[type=checkbox] + label {
-  background: var(--neutral-white);
-  border: 1px solid var(--neutral-light-gray);
-  border-radius: 5px;
-  height: 24px;
-  width: 24px;
-  display: inline-block;
-  padding: 0 0 0 0px;
-  margin-right: 1rem;
-}
-main #addonsInfos #addonsInfosContent #addons .card #addon .addonIcon input[type=checkbox]:checked + label {
-  background-image: url("../images/icon-checkmark.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 1rem;
-  background-color: var(--primary-purplish-blue);
-  border-radius: 5px;
-  height: 24px;
-  width: 24px;
-  display: inline-block;
-  padding: 0 0 0 0px;
-  margin-right: 1rem;
-}
-main #addonsInfos #addonsInfosContent #addons .card .monthlyAddon,
-main #addonsInfos #addonsInfosContent #addons .card .yearlyAddon {
-  color: var(--primary-purplish-blue);
-  font-size: 0.8rem;
-  font-weight: var(--font-weight-500);
-}
-main #finishingUpInfos #finishingUpInfosContent {
-  padding: 2rem 1.5rem 1rem;
-}
-main #finishingUpInfos #finishingUpInfosContent .description {
-  margin-bottom: 1rem;
-}
-main #finishingUpInfos #finishingUpInfosContent .finishingUp {
-  background-color: rgba(191, 226, 253, 0.3);
-  padding: 1rem;
-  border-radius: 5px;
-}
-main #finishingUpInfos #finishingUpInfosContent .finishingUp .choosedPlan {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 0.7rem;
-}
-main #finishingUpInfos #finishingUpInfosContent .finishingUp .choosedPlan .miniTitle {
-  margin-bottom: 0.2rem;
-}
-main #finishingUpInfos #finishingUpInfosContent .finishingUp .choosedPlan a.miniSubTitle {
-  text-decoration: underline;
-}
-main #finishingUpInfos #finishingUpInfosContent .finishingUp .choosedAddons div {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 0.7rem;
-}
-main #finishingUpInfos #finishingUpInfosContent .finishingUp .choosedAddons div .finishingUpPrice {
-  color: var(--primary-marine-blue);
-  font-size: 1rem;
-  font-weight: var(--font-weight-400);
-}
-main #finishingUpInfos #finishingUpInfosContent .total {
-  display: flex;
-  justify-content: space-between;
-  padding: 1rem;
-}
-main #finishingUpInfos #finishingUpInfosContent .total .totalPrice {
-  color: var(--primary-purplish-blue);
-  font-size: 1rem;
-  font-weight: var(--font-weight-700);
-}
-main #thankYou #thankYouContent {
-  text-align: center;
-}
-main #thankYou #thankYouContent img {
-  margin-bottom: 1rem;
-}
-main #thankYou #thankYouContent .description {
-  font-size: 1.2rem;
-}
-main #buttons {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 13%;
   font-weight: var(--font-weight-500);
   padding: 0 5%;
+  margin-top: 2.5rem;
+  background-color: var(--neutral-white);
 }
-main #buttons .button {
+main .fullContent #buttons .button {
   border: none;
   border-radius: 5px;
   outline: none;
   font-weight: var(--font-weight-700);
   padding: 0.8rem 1rem;
+  cursor: pointer;
 }
-main #buttons #goBack {
+main .fullContent #buttons #goBack {
   background-color: var(--neutral-white);
   color: var(--neutral-cool-gray);
 }
-main #buttons #nextStep {
+main .fullContent #buttons #nextStep {
   background-color: var(--primary-marine-blue);
   color: var(--neutral-alabaster);
 }
-main #buttons #confirm {
+main .fullContent #buttons #confirm {
   background-color: var(--primary-purplish-blue);
   color: var(--neutral-alabaster);
 }/*# sourceMappingURL=style.css.map */
