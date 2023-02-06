@@ -428,4 +428,350 @@ main .fullContent #buttons #nextStep {
 main .fullContent #buttons #confirm {
   background-color: var(--primary-purplish-blue);
   color: var(--neutral-alabaster);
+}
+
+@media only screen and (max-width: 768px) {
+  main {
+    background-color: var(--neutral-white);
+    display: flex;
+    border-radius: 10px;
+    padding: 0rem;
+    margin: 0 1rem 9rem;
+  }
+  main #sidebar {
+    background-image: url("../images/bg-sidebar-mobile.svg");
+    position: absolute;
+    flex-direction: row;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 25%;
+    z-index: -2;
+    justify-content: space-evenly;
+    padding: 3rem 3rem;
+  }
+  main #sidebar > div {
+    display: flex;
+    margin-bottom: 1.3rem;
+  }
+  main #sidebar > div #stepOneNum,
+main #sidebar > div #stepTwoNum,
+main #sidebar > div #stepThreeNum,
+main #sidebar > div #stepFourNum {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--neutral-alabaster);
+    border: 2px solid var(--neutral-alabaster);
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    font-weight: var(--font-weight-500);
+  }
+  main #sidebar > div #stepContent {
+    display: none;
+  }
+  main #sidebar > div #stepContent #stepSubTitle {
+    color: var(--neutral-cool-gray);
+    text-transform: uppercase;
+    font-size: 0.7rem;
+  }
+  main #sidebar > div #stepContent #stepTitle {
+    color: var(--neutral-white);
+    text-transform: uppercase;
+    font-weight: var(--font-weight-500);
+    font-size: 0.9rem;
+  }
+  main .fullContent {
+    padding: 0;
+  }
+  main .fullContent #personalInfos #personalInfosContent label {
+    color: var(--primary-marine-blue);
+    font-size: 0.8rem;
+    font-weight: var(--font-weight-500);
+  }
+  main .fullContent #personalInfos #personalInfosContent form {
+    margin-top: 1.5rem;
+  }
+  main .fullContent #personalInfos #personalInfosContent form .inputInfo {
+    margin-top: 1rem;
+  }
+  main .fullContent #personalInfos #personalInfosContent input {
+    width: 100%;
+    border: 1px solid var(--neutral-light-gray);
+    outline: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-weight: var(--font-weight-700);
+    color: var(--primary-marine-blue);
+    margin-top: 0.3rem;
+  }
+  main .fullContent #personalInfos #personalInfosContent input:focus {
+    border: 1px solid var(--primary-purplish-blue);
+  }
+  main .fullContent #personalInfos #personalInfosContent input::-moz-placeholder {
+    font-weight: var(--font-weight-700);
+    color: var(--neutral-cool-gray);
+  }
+  main .fullContent #personalInfos #personalInfosContent input:-ms-input-placeholder {
+    font-weight: var(--font-weight-700);
+    color: var(--neutral-cool-gray);
+  }
+  main .fullContent #personalInfos #personalInfosContent input::placeholder {
+    font-weight: var(--font-weight-700);
+    color: var(--neutral-cool-gray);
+  }
+  main .fullContent #plansInfos #plansInfosContent #plans {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.7rem;
+  }
+  main .fullContent #plansInfos #plansInfosContent #plans #arcade,
+main .fullContent #plansInfos #plansInfosContent #plans #advanced,
+main .fullContent #plansInfos #plansInfosContent #plans #pro {
+    width: 7rem;
+  }
+  main .fullContent #plansInfos #plansInfosContent #plans #arcade .planIcon,
+main .fullContent #plansInfos #plansInfosContent #plans #advanced .planIcon,
+main .fullContent #plansInfos #plansInfosContent #plans #pro .planIcon {
+    padding-right: 0.8rem;
+  }
+  main .fullContent #plansInfos #plansInfosContent #plans #arcade .planContent,
+main .fullContent #plansInfos #plansInfosContent #plans #advanced .planContent,
+main .fullContent #plansInfos #plansInfosContent #plans #pro .planContent {
+    margin-top: 2rem;
+  }
+  main .fullContent #plansInfos #plansInfosContent #plans #arcade .planContent .freeMonths,
+main .fullContent #plansInfos #plansInfosContent #plans #advanced .planContent .freeMonths,
+main .fullContent #plansInfos #plansInfosContent #plans #pro .planContent .freeMonths {
+    color: var(--primary-marine-blue);
+    font-size: 0.8rem;
+    font-weight: var(--font-weight-500);
+  }
+  main .fullContent #plansInfos #plansInfosContent .subscriptions {
+    display: flex;
+    justify-content: center;
+    background-color: var(--neutral-magnolia);
+    padding: 1rem;
+    margin-top: 1.5rem;
+    border-radius: 8px;
+    color: var(--neutral-cool-gray);
+    font-size: 1rem;
+    font-weight: var(--font-weight-500);
+  }
+  main .fullContent #plansInfos #plansInfosContent .subscriptions .selectedSubscription {
+    color: var(--primary-marine-blue);
+  }
+  main .fullContent #plansInfos #plansInfosContent .subscriptions .toggle-container {
+    display: flex;
+    align-items: center;
+  }
+  main .fullContent #plansInfos #plansInfosContent .subscriptions .toggle {
+    visibility: hidden;
+  }
+  main .fullContent #plansInfos #plansInfosContent .subscriptions .label {
+    position: relative;
+    background-color: var(--primary-marine-blue);
+    border-radius: 50px;
+    cursor: pointer;
+    display: inline-block;
+    margin: 0 15px 0 0;
+    width: 40px;
+    height: 20px;
+  }
+  main .fullContent #plansInfos #plansInfosContent .subscriptions .circle {
+    background: #fff;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 3px;
+    align-items: center;
+    justify-content: center;
+    -webkit-animation: slideOff 0.3s linear forwards;
+            animation: slideOff 0.3s linear forwards;
+  }
+  main .fullContent #plansInfos #plansInfosContent .subscriptions .toggle:checked + .label .circle {
+    -webkit-animation: slideOn 0.3s linear forwards;
+            animation: slideOn 0.3s linear forwards;
+  }
+  @-webkit-keyframes slideOn {
+    0% {
+      transform: translateX(0) scale(1);
+    }
+    50% {
+      transform: translateX(10px) scale(1.2);
+    }
+    100% {
+      transform: translateX(20px) scale(1);
+    }
+  }
+  @keyframes slideOn {
+    0% {
+      transform: translateX(0) scale(1);
+    }
+    50% {
+      transform: translateX(10px) scale(1.2);
+    }
+    100% {
+      transform: translateX(20px) scale(1);
+    }
+  }
+  @-webkit-keyframes slideOff {
+    0% {
+      transform: translateX(20px) scale(1);
+    }
+    50% {
+      transform: translateX(10px) scale(1.2);
+    }
+    100% {
+      transform: translateX(0) scale(1);
+    }
+  }
+  @keyframes slideOff {
+    0% {
+      transform: translateX(20px) scale(1);
+    }
+    50% {
+      transform: translateX(10px) scale(1.2);
+    }
+    100% {
+      transform: translateX(0) scale(1);
+    }
+  }
+  main .fullContent #addonsInfos #addonsInfosContent #addons {
+    margin-top: 2rem;
+  }
+  main .fullContent #addonsInfos #addonsInfosContent #addons .card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  main .fullContent #addonsInfos #addonsInfosContent #addons .card #addon {
+    display: flex;
+    justify-content: center;
+  }
+  main .fullContent #addonsInfos #addonsInfosContent #addons .card #addon .addonIcon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  main .fullContent #addonsInfos #addonsInfosContent #addons .card #addon .addonIcon input[type=checkbox] {
+    display: none;
+  }
+  main .fullContent #addonsInfos #addonsInfosContent #addons .card #addon .addonIcon input[type=checkbox] + label {
+    background: var(--neutral-white);
+    border: 1px solid var(--neutral-light-gray);
+    border-radius: 5px;
+    height: 24px;
+    width: 24px;
+    display: inline-block;
+    padding: 0 0 0 0px;
+    margin-right: 1rem;
+  }
+  main .fullContent #addonsInfos #addonsInfosContent #addons .card #addon .addonIcon input[type=checkbox]:checked + label {
+    background-image: url("../images/icon-checkmark.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 1rem;
+    background-color: var(--primary-purplish-blue);
+    border-radius: 5px;
+    height: 24px;
+    width: 24px;
+    display: inline-block;
+    padding: 0 0 0 0px;
+    margin-right: 1rem;
+  }
+  main .fullContent #addonsInfos #addonsInfosContent #addons .card .monthlyAddon,
+main .fullContent #addonsInfos #addonsInfosContent #addons .card .yearlyAddon {
+    color: var(--primary-purplish-blue);
+    font-size: 0.8rem;
+    font-weight: var(--font-weight-500);
+  }
+  main .fullContent #finishingUpInfos #finishingUpInfosContent {
+    padding: 2rem 1.5rem 1rem;
+  }
+  main .fullContent #finishingUpInfos #finishingUpInfosContent .description {
+    margin-bottom: 1rem;
+  }
+  main .fullContent #finishingUpInfos #finishingUpInfosContent .finishingUp {
+    background-color: rgba(191, 226, 253, 0.3);
+    padding: 1rem;
+    border-radius: 5px;
+    margin-top: 1.7rem;
+  }
+  main .fullContent #finishingUpInfos #finishingUpInfosContent .finishingUp .choosedPlan {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.7rem;
+  }
+  main .fullContent #finishingUpInfos #finishingUpInfosContent .finishingUp .choosedPlan .miniTitle {
+    margin-bottom: 0.2rem;
+  }
+  main .fullContent #finishingUpInfos #finishingUpInfosContent .finishingUp .choosedPlan a.miniSubTitle {
+    text-decoration: underline;
+  }
+  main .fullContent #finishingUpInfos #finishingUpInfosContent .finishingUp .choosedAddons div {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.7rem;
+  }
+  main .fullContent #finishingUpInfos #finishingUpInfosContent .finishingUp .choosedAddons div .finishingUpPrice {
+    color: var(--primary-marine-blue);
+    font-size: 1rem;
+    font-weight: var(--font-weight-400);
+  }
+  main .fullContent #finishingUpInfos #finishingUpInfosContent .total {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+  }
+  main .fullContent #finishingUpInfos #finishingUpInfosContent .total .totalPrice {
+    color: var(--primary-purplish-blue);
+    font-size: 1rem;
+    font-weight: var(--font-weight-700);
+  }
+  main .fullContent #thankYou {
+    padding: 4rem 0;
+  }
+  main .fullContent #thankYou #thankYouContent {
+    text-align: center;
+  }
+  main .fullContent #thankYou #thankYouContent img {
+    margin-bottom: 1rem;
+  }
+  main .fullContent #thankYou #thankYouContent .description {
+    font-size: 1rem;
+    width: 480px;
+  }
+  main .fullContent #buttons {
+    position: absolute;
+    width: 100%;
+    margin-left: -1rem;
+    bottom: 0;
+    padding: 1rem 5%;
+  }
+  main .fullContent #buttons .button {
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    font-weight: var(--font-weight-700);
+    padding: 0.8rem 1rem;
+    cursor: pointer;
+  }
+  main .fullContent #buttons #goBack {
+    background-color: var(--neutral-white);
+    color: var(--neutral-cool-gray);
+  }
+  main .fullContent #buttons #nextStep {
+    background-color: var(--primary-marine-blue);
+    color: var(--neutral-alabaster);
+  }
+  main .fullContent #buttons #confirm {
+    background-color: var(--primary-purplish-blue);
+    color: var(--neutral-alabaster);
+  }
 }/*# sourceMappingURL=style.css.map */
