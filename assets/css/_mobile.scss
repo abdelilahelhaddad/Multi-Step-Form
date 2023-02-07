@@ -6,9 +6,10 @@
   main {
     background-color: var(--neutral-white);
     display: flex;
+    flex-direction: column;
     border-radius: 10px;
     padding: 0rem;
-    margin: 0 1rem 10%;
+    // margin: 0 1rem 10%;
     #sidebar {
       background-image: url("../images/bg-sidebar-mobile.svg");
       position: absolute;
@@ -200,32 +201,37 @@
         }
       }
       #buttons {
-        position: absolute;
-        width: 100%;
-        margin-left: -1rem;
-        bottom: 0;
-        padding: 1rem 5%;
-        .button {
-          border: none;
-          border-radius: 5px;
-          outline: none;
-          font-weight: var(--font-weight-700);
-          padding: 0.8rem 1rem;
-          cursor: pointer;
-        }
-        #goBack {
-          // visibility: hidden;
-          background-color: var(--neutral-white);
-          color: var(--neutral-cool-gray);
-        }
-        #nextStep {
-          background-color: var(--primary-marine-blue);
-          color: var(--neutral-alabaster);
-        }
-        #confirm {
-          background-color: var(--primary-purplish-blue);
-          color: var(--neutral-alabaster);
-        }
+        display: none;
+      }
+    }
+    #mobileButtons {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      padding: 1rem 5%;
+      margin-top: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: var(--font-weight-500);
+      background-color: var(--neutral-white);
+      .button {
+        border: none;
+        border-radius: 5px;
+        outline: none;
+        font-weight: var(--font-weight-700);
+        padding: 0.8rem 1rem;
+        cursor: pointer;
+      }
+      #goBack {
+        // visibility: hidden;
+        background-color: var(--neutral-white);
+        color: var(--neutral-cool-gray);
+      }
+      #nextStep {
+        background-color: var(--primary-marine-blue);
+        color: var(--neutral-alabaster);
       }
     }
   }

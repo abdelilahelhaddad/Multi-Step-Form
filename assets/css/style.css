@@ -32,7 +32,7 @@ body {
 }
 
 .hidden {
-  display: none;
+  display: none !important;
 }
 
 .activeCircle {
@@ -425,9 +425,8 @@ main .fullContent #buttons #nextStep {
   background-color: var(--primary-marine-blue);
   color: var(--neutral-alabaster);
 }
-main .fullContent #buttons #confirm {
-  background-color: var(--primary-purplish-blue);
-  color: var(--neutral-alabaster);
+main #mobileButtons {
+  display: none;
 }
 
 @media only screen and (max-width: 768px) {
@@ -437,9 +436,9 @@ main .fullContent #buttons #confirm {
   main {
     background-color: var(--neutral-white);
     display: flex;
+    flex-direction: column;
     border-radius: 10px;
     padding: 0rem;
-    margin: 0 1rem 10%;
   }
   main #sidebar {
     background-image: url("../images/bg-sidebar-mobile.svg");
@@ -652,13 +651,22 @@ main .fullContent #plansInfos #plansInfosContent #plans #pro .planContent .freeM
     width: 340px;
   }
   main .fullContent #buttons {
-    position: absolute;
-    width: 100%;
-    margin-left: -1rem;
-    bottom: 0;
-    padding: 1rem 5%;
+    display: none;
   }
-  main .fullContent #buttons .button {
+  main #mobileButtons {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    padding: 1rem 5%;
+    margin-top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: var(--font-weight-500);
+    background-color: var(--neutral-white);
+  }
+  main #mobileButtons .button {
     border: none;
     border-radius: 5px;
     outline: none;
@@ -666,16 +674,12 @@ main .fullContent #plansInfos #plansInfosContent #plans #pro .planContent .freeM
     padding: 0.8rem 1rem;
     cursor: pointer;
   }
-  main .fullContent #buttons #goBack {
+  main #mobileButtons #goBack {
     background-color: var(--neutral-white);
     color: var(--neutral-cool-gray);
   }
-  main .fullContent #buttons #nextStep {
+  main #mobileButtons #nextStep {
     background-color: var(--primary-marine-blue);
-    color: var(--neutral-alabaster);
-  }
-  main .fullContent #buttons #confirm {
-    background-color: var(--primary-purplish-blue);
     color: var(--neutral-alabaster);
   }
 }/*# sourceMappingURL=style.css.map */

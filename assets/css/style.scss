@@ -36,7 +36,7 @@ body {
 }
 
 .hidden {
-  display: none;
+  display: none !important;
 }
 
 .activeCircle {
@@ -415,11 +415,10 @@ main {
         background-color: var(--primary-marine-blue);
         color: var(--neutral-alabaster);
       }
-      #confirm {
-        background-color: var(--primary-purplish-blue);
-        color: var(--neutral-alabaster);
-      }
     }
+  }
+  #mobileButtons {
+    display: none;
   }
 }
 
