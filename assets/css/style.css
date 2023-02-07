@@ -439,6 +439,7 @@ main #mobileButtons {
     flex-direction: column;
     border-radius: 10px;
     padding: 0rem;
+    margin: 0 1rem 30% 1rem;
   }
   main #sidebar {
     background-image: url("../images/bg-sidebar-mobile.svg");
