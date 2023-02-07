@@ -1,0 +1,232 @@
+@media only screen and (max-width: 768px) {
+  .contentBackground {
+    padding: 1.8rem 1.5rem;
+  }
+
+  main {
+    background-color: var(--neutral-white);
+    display: flex;
+    border-radius: 10px;
+    padding: 0rem;
+    margin: 0 1rem 10%;
+    #sidebar {
+      background-image: url("../images/bg-sidebar-mobile.svg");
+      position: absolute;
+      flex-direction: row;
+      top: 0;
+      right: 0;
+      left: 0;
+      width: 100%;
+      height: 25%;
+      z-index: -2;
+      justify-content: space-evenly;
+      padding: 3rem 3rem;
+      > div {
+        display: flex;
+        margin-bottom: 1.3rem;
+        #stepOneNum,
+        #stepTwoNum,
+        #stepThreeNum,
+        #stepFourNum {
+          display: inline-flex;
+          justify-content: center;
+          align-items: center;
+          color: var(--neutral-alabaster);
+          border: 2px solid var(--neutral-alabaster);
+          width: 2.5rem;
+          height: 2.5rem;
+          border-radius: 50%;
+          font-weight: var(--font-weight-500);
+        }
+        #stepContent {
+          display: none;
+          #stepSubTitle {
+            color: var(--neutral-cool-gray);
+            text-transform: uppercase;
+            font-size: 0.7rem;
+          }
+          #stepTitle {
+            color: var(--neutral-white);
+            text-transform: uppercase;
+            font-weight: var(--font-weight-500);
+            font-size: 0.9rem;
+          }
+        }
+      }
+    }
+    .fullContent {
+      padding: 0;
+      #personalInfos {
+        #personalInfosContent {
+          label {
+            color: var(--primary-marine-blue);
+            font-size: 0.8rem;
+            font-weight: var(--font-weight-500);
+          }
+          form {
+            margin-top: 1.5rem;
+          }
+          form .inputInfo {
+            margin-top: 1rem;
+          }
+          input {
+            width: 100%;
+            border: 1px solid var(--neutral-light-gray);
+            outline: none;
+            border-radius: 5px;
+            padding: 10px 15px;
+            font-weight: var(--font-weight-700);
+            color: var(--primary-marine-blue);
+            margin-top: 0.3rem;
+            &:focus {
+              border: 1px solid var(--primary-purplish-blue);
+            }
+            &::placeholder {
+              font-weight: var(--font-weight-700);
+              color: var(--neutral-cool-gray);
+            }
+          }
+        }
+      }
+      #plansInfos {
+        #plansInfosContent {
+          #plans {
+            flex-direction: column;
+            margin-top: 0;
+            #arcade,
+            #advanced,
+            #pro {
+              width: 100%;
+              display: flex;
+              .planIcon {
+                padding-right: 0.8rem;
+              }
+              .planContent {
+                margin-top: 0;
+                .freeMonths {
+                  margin-top: 0.5rem;
+                }
+              }
+            }
+          }
+          .subscriptions {
+            display: flex;
+            justify-content: center;
+            background-color: var(--neutral-magnolia);
+            padding: 1rem;
+            margin-top: 1.5rem;
+            border-radius: 8px;
+            color: var(--neutral-cool-gray);
+            font-size: 1rem;
+            font-weight: var(--font-weight-500);
+            .selectedSubscription {
+              color: var(--primary-marine-blue);
+            }
+
+            .toggle-container {
+              display: flex;
+              align-items: center;
+            }
+
+            .toggle {
+              visibility: hidden;
+            }
+
+            .label {
+              position: relative;
+              background-color: var(--primary-marine-blue);
+              border-radius: 50px;
+              cursor: pointer;
+              display: inline-block;
+              margin: 0 15px 0 0;
+              width: 40px;
+              height: 20px;
+            }
+
+            .circle {
+              background: #fff;
+              height: 16px;
+              width: 16px;
+              border-radius: 50%;
+              position: absolute;
+              top: 2px;
+              left: 3px;
+              align-items: center;
+              justify-content: center;
+              animation: slideOff 0.3s linear forwards;
+            }
+
+            .toggle:checked + .label .circle {
+              animation: slideOn 0.3s linear forwards;
+            }
+
+            @keyframes slideOn {
+              0% {
+                transform: translateX(0) scale(1);
+              }
+              50% {
+                transform: translateX(10px) scale(1.2);
+              }
+              100% {
+                transform: translateX(20px) scale(1);
+              }
+            }
+
+            @keyframes slideOff {
+              0% {
+                transform: translateX(20px) scale(1);
+              }
+              50% {
+                transform: translateX(10px) scale(1.2);
+              }
+              100% {
+                transform: translateX(0) scale(1);
+              }
+            }
+          }
+        }
+      }
+      #finishingUpInfos {
+        #finishingUpInfosContent {
+          padding: 2.5rem 1.5rem 1.2rem;
+        }
+      }
+      #thankYou {
+        padding: 3rem 0;
+        #thankYouContent {
+          .description {
+            width: 340px;
+          }
+        }
+      }
+      #buttons {
+        position: absolute;
+        width: 100%;
+        margin-left: -1rem;
+        bottom: 0;
+        padding: 1rem 5%;
+        .button {
+          border: none;
+          border-radius: 5px;
+          outline: none;
+          font-weight: var(--font-weight-700);
+          padding: 0.8rem 1rem;
+          cursor: pointer;
+        }
+        #goBack {
+          // visibility: hidden;
+          background-color: var(--neutral-white);
+          color: var(--neutral-cool-gray);
+        }
+        #nextStep {
+          background-color: var(--primary-marine-blue);
+          color: var(--neutral-alabaster);
+        }
+        #confirm {
+          background-color: var(--primary-purplish-blue);
+          color: var(--neutral-alabaster);
+        }
+      }
+    }
+  }
+}

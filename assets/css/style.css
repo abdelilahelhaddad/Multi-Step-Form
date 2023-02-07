@@ -431,12 +431,15 @@ main .fullContent #buttons #confirm {
 }
 
 @media only screen and (max-width: 768px) {
+  .contentBackground {
+    padding: 1.8rem 1.5rem;
+  }
   main {
     background-color: var(--neutral-white);
     display: flex;
     border-radius: 10px;
     padding: 0rem;
-    margin: 0 1rem 9rem;
+    margin: 0 1rem 10%;
   }
   main #sidebar {
     background-image: url("../images/bg-sidebar-mobile.svg");
@@ -523,14 +526,14 @@ main #sidebar > div #stepFourNum {
     color: var(--neutral-cool-gray);
   }
   main .fullContent #plansInfos #plansInfosContent #plans {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 1.7rem;
+    flex-direction: column;
+    margin-top: 0;
   }
   main .fullContent #plansInfos #plansInfosContent #plans #arcade,
 main .fullContent #plansInfos #plansInfosContent #plans #advanced,
 main .fullContent #plansInfos #plansInfosContent #plans #pro {
-    width: 7rem;
+    width: 100%;
+    display: flex;
   }
   main .fullContent #plansInfos #plansInfosContent #plans #arcade .planIcon,
 main .fullContent #plansInfos #plansInfosContent #plans #advanced .planIcon,
@@ -540,14 +543,12 @@ main .fullContent #plansInfos #plansInfosContent #plans #pro .planIcon {
   main .fullContent #plansInfos #plansInfosContent #plans #arcade .planContent,
 main .fullContent #plansInfos #plansInfosContent #plans #advanced .planContent,
 main .fullContent #plansInfos #plansInfosContent #plans #pro .planContent {
-    margin-top: 2rem;
+    margin-top: 0;
   }
   main .fullContent #plansInfos #plansInfosContent #plans #arcade .planContent .freeMonths,
 main .fullContent #plansInfos #plansInfosContent #plans #advanced .planContent .freeMonths,
 main .fullContent #plansInfos #plansInfosContent #plans #pro .planContent .freeMonths {
-    color: var(--primary-marine-blue);
-    font-size: 0.8rem;
-    font-weight: var(--font-weight-500);
+    margin-top: 0.5rem;
   }
   main .fullContent #plansInfos #plansInfosContent .subscriptions {
     display: flex;
@@ -641,111 +642,14 @@ main .fullContent #plansInfos #plansInfosContent #plans #pro .planContent .freeM
       transform: translateX(0) scale(1);
     }
   }
-  main .fullContent #addonsInfos #addonsInfosContent #addons {
-    margin-top: 2rem;
-  }
-  main .fullContent #addonsInfos #addonsInfosContent #addons .card {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  main .fullContent #addonsInfos #addonsInfosContent #addons .card #addon {
-    display: flex;
-    justify-content: center;
-  }
-  main .fullContent #addonsInfos #addonsInfosContent #addons .card #addon .addonIcon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  main .fullContent #addonsInfos #addonsInfosContent #addons .card #addon .addonIcon input[type=checkbox] {
-    display: none;
-  }
-  main .fullContent #addonsInfos #addonsInfosContent #addons .card #addon .addonIcon input[type=checkbox] + label {
-    background: var(--neutral-white);
-    border: 1px solid var(--neutral-light-gray);
-    border-radius: 5px;
-    height: 24px;
-    width: 24px;
-    display: inline-block;
-    padding: 0 0 0 0px;
-    margin-right: 1rem;
-  }
-  main .fullContent #addonsInfos #addonsInfosContent #addons .card #addon .addonIcon input[type=checkbox]:checked + label {
-    background-image: url("../images/icon-checkmark.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 1rem;
-    background-color: var(--primary-purplish-blue);
-    border-radius: 5px;
-    height: 24px;
-    width: 24px;
-    display: inline-block;
-    padding: 0 0 0 0px;
-    margin-right: 1rem;
-  }
-  main .fullContent #addonsInfos #addonsInfosContent #addons .card .monthlyAddon,
-main .fullContent #addonsInfos #addonsInfosContent #addons .card .yearlyAddon {
-    color: var(--primary-purplish-blue);
-    font-size: 0.8rem;
-    font-weight: var(--font-weight-500);
-  }
   main .fullContent #finishingUpInfos #finishingUpInfosContent {
-    padding: 2rem 1.5rem 1rem;
-  }
-  main .fullContent #finishingUpInfos #finishingUpInfosContent .description {
-    margin-bottom: 1rem;
-  }
-  main .fullContent #finishingUpInfos #finishingUpInfosContent .finishingUp {
-    background-color: rgba(191, 226, 253, 0.3);
-    padding: 1rem;
-    border-radius: 5px;
-    margin-top: 1.7rem;
-  }
-  main .fullContent #finishingUpInfos #finishingUpInfosContent .finishingUp .choosedPlan {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 0.7rem;
-  }
-  main .fullContent #finishingUpInfos #finishingUpInfosContent .finishingUp .choosedPlan .miniTitle {
-    margin-bottom: 0.2rem;
-  }
-  main .fullContent #finishingUpInfos #finishingUpInfosContent .finishingUp .choosedPlan a.miniSubTitle {
-    text-decoration: underline;
-  }
-  main .fullContent #finishingUpInfos #finishingUpInfosContent .finishingUp .choosedAddons div {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 0.7rem;
-  }
-  main .fullContent #finishingUpInfos #finishingUpInfosContent .finishingUp .choosedAddons div .finishingUpPrice {
-    color: var(--primary-marine-blue);
-    font-size: 1rem;
-    font-weight: var(--font-weight-400);
-  }
-  main .fullContent #finishingUpInfos #finishingUpInfosContent .total {
-    display: flex;
-    justify-content: space-between;
-    padding: 1rem;
-  }
-  main .fullContent #finishingUpInfos #finishingUpInfosContent .total .totalPrice {
-    color: var(--primary-purplish-blue);
-    font-size: 1rem;
-    font-weight: var(--font-weight-700);
+    padding: 2.5rem 1.5rem 1.2rem;
   }
   main .fullContent #thankYou {
-    padding: 4rem 0;
-  }
-  main .fullContent #thankYou #thankYouContent {
-    text-align: center;
-  }
-  main .fullContent #thankYou #thankYouContent img {
-    margin-bottom: 1rem;
+    padding: 3rem 0;
   }
   main .fullContent #thankYou #thankYouContent .description {
-    font-size: 1rem;
-    width: 480px;
+    width: 340px;
   }
   main .fullContent #buttons {
     position: absolute;
