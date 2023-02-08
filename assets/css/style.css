@@ -35,6 +35,10 @@ body {
   display: none !important;
 }
 
+.visibility {
+  visibility: hidden;
+}
+
 .activeCircle {
   background-color: var(--primary-light-blue) !important;
   color: var(--primary-marine-blue) !important;
@@ -229,7 +233,7 @@ main .fullContent #plansInfos #plansInfosContent .subscriptions .label {
   width: 40px;
   height: 20px;
 }
-main .fullContent #plansInfos #plansInfosContent .subscriptions .circle {
+main .fullContent #plansInfos #plansInfosContent .subscriptions .theCircle {
   background: #fff;
   height: 16px;
   width: 16px;
@@ -549,7 +553,7 @@ main #mobileButtons {
     width: 40px;
     height: 20px;
   }
-  main .fullContent #plansInfos #plansInfosContent .subscriptions .circle {
+  main .fullContent #plansInfos #plansInfosContent .subscriptions .theCircle {
     background: #fff;
     height: 16px;
     width: 16px;

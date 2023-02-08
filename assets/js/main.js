@@ -11,7 +11,6 @@ nextStep.addEventListener('click', () => {
   if (currentActive > circles.length) {
     currentActive = circles.length
   }
-
   update()
 })
 
@@ -29,21 +28,19 @@ goBack.addEventListener('click', () => {
 function update() {
   circles.forEach((circle, idx) => {
     if (idx < currentActive) {
+      for (var i = 0; i < circles.length; i++) {
+        circles[i].classList.remove('activeCircle');
+      }
       circle.classList.add('activeCircle')
-    }
-    if (idx > currentActive) {
-      circle.classList.remove('activeCircle')
     }
   })
 
-  const actives = document.querySelectorAll('.activeCircle')
-
   if (currentActive === 1) {
-    goBack.disabled = true
+    goBack.classList.add('visibility')
   } else if (currentActive === circles.length) {
-    nextStep.disabled = true
+    nextStep.classList.add('visibility')
   } else {
-    goBack.disabled = false
-    nextStep.disabled = false
+    goBack.classList.remove('visibility')
+    nextStep.classList.remove('visibility')
   }
 }

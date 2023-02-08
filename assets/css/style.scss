@@ -39,6 +39,10 @@ body {
   display: none !important;
 }
 
+.visibility {
+  visibility: hidden;
+}
+
 .activeCircle {
   background-color: var(--primary-light-blue) !important;
   color: var(--primary-marine-blue) !important;
@@ -231,7 +235,7 @@ main {
             height: 20px;
           }
 
-          .circle {
+          .theCircle {
             background: #fff;
             height: 16px;
             width: 16px;
@@ -407,7 +411,6 @@ main {
         cursor: pointer;
       }
       #goBack {
-        // visibility: hidden;
         background-color: var(--neutral-white);
         color: var(--neutral-cool-gray);
       }

@@ -144,7 +144,7 @@
               height: 20px;
             }
 
-            .circle {
+            .theCircle {
               background: #fff;
               height: 16px;
               width: 16px;
@@ -225,7 +225,6 @@
         cursor: pointer;
       }
       #goBack {
-        // visibility: hidden;
         background-color: var(--neutral-white);
         color: var(--neutral-cool-gray);
       }
