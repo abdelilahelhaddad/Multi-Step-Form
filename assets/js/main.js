@@ -1,6 +1,7 @@
-const goBack = document.getElementById('goBack')
-const nextStep = document.getElementById('nextStep')
+const goBack = document.querySelector('.goBack')
+const nextStep = document.querySelector('.nextStep')
 const circles = document.querySelectorAll('.circle')
+const theContents = document.querySelectorAll('.theContent')
 
 let currentActive = 1
 
@@ -24,11 +25,13 @@ goBack.addEventListener('click', () => {
   update()
 })
 
+
 function update() {
   circles.forEach((circle, idx) => {
     if (idx < currentActive) {
       circle.classList.add('activeCircle')
-    } else {
+    }
+    if (idx > currentActive) {
       circle.classList.remove('activeCircle')
     }
   })

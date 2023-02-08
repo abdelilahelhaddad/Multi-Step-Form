@@ -167,10 +167,6 @@ main .fullContent #personalInfos #personalInfosContent input::-moz-placeholder {
   font-weight: var(--font-weight-700);
   color: var(--neutral-cool-gray);
 }
-main .fullContent #personalInfos #personalInfosContent input:-ms-input-placeholder {
-  font-weight: var(--font-weight-700);
-  color: var(--neutral-cool-gray);
-}
 main .fullContent #personalInfos #personalInfosContent input::placeholder {
   font-weight: var(--font-weight-700);
   color: var(--neutral-cool-gray);
@@ -243,23 +239,10 @@ main .fullContent #plansInfos #plansInfosContent .subscriptions .circle {
   left: 3px;
   align-items: center;
   justify-content: center;
-  -webkit-animation: slideOff 0.3s linear forwards;
-          animation: slideOff 0.3s linear forwards;
+  animation: slideOff 0.3s linear forwards;
 }
 main .fullContent #plansInfos #plansInfosContent .subscriptions .toggle:checked + .label .circle {
-  -webkit-animation: slideOn 0.3s linear forwards;
-          animation: slideOn 0.3s linear forwards;
-}
-@-webkit-keyframes slideOn {
-  0% {
-    transform: translateX(0) scale(1);
-  }
-  50% {
-    transform: translateX(10px) scale(1.2);
-  }
-  100% {
-    transform: translateX(20px) scale(1);
-  }
+  animation: slideOn 0.3s linear forwards;
 }
 @keyframes slideOn {
   0% {
@@ -270,17 +253,6 @@ main .fullContent #plansInfos #plansInfosContent .subscriptions .toggle:checked 
   }
   100% {
     transform: translateX(20px) scale(1);
-  }
-}
-@-webkit-keyframes slideOff {
-  0% {
-    transform: translateX(20px) scale(1);
-  }
-  50% {
-    transform: translateX(10px) scale(1.2);
-  }
-  100% {
-    transform: translateX(0) scale(1);
   }
 }
 @keyframes slideOff {
@@ -459,9 +431,9 @@ main #mobileButtons {
     margin-bottom: 1.3rem;
   }
   main #sidebar > div #stepOneNum,
-main #sidebar > div #stepTwoNum,
-main #sidebar > div #stepThreeNum,
-main #sidebar > div #stepFourNum {
+  main #sidebar > div #stepTwoNum,
+  main #sidebar > div #stepThreeNum,
+  main #sidebar > div #stepFourNum {
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -517,10 +489,6 @@ main #sidebar > div #stepFourNum {
     font-weight: var(--font-weight-700);
     color: var(--neutral-cool-gray);
   }
-  main .fullContent #personalInfos #personalInfosContent input:-ms-input-placeholder {
-    font-weight: var(--font-weight-700);
-    color: var(--neutral-cool-gray);
-  }
   main .fullContent #personalInfos #personalInfosContent input::placeholder {
     font-weight: var(--font-weight-700);
     color: var(--neutral-cool-gray);
@@ -530,24 +498,24 @@ main #sidebar > div #stepFourNum {
     margin-top: 0;
   }
   main .fullContent #plansInfos #plansInfosContent #plans #arcade,
-main .fullContent #plansInfos #plansInfosContent #plans #advanced,
-main .fullContent #plansInfos #plansInfosContent #plans #pro {
+  main .fullContent #plansInfos #plansInfosContent #plans #advanced,
+  main .fullContent #plansInfos #plansInfosContent #plans #pro {
     width: 100%;
     display: flex;
   }
   main .fullContent #plansInfos #plansInfosContent #plans #arcade .planIcon,
-main .fullContent #plansInfos #plansInfosContent #plans #advanced .planIcon,
-main .fullContent #plansInfos #plansInfosContent #plans #pro .planIcon {
+  main .fullContent #plansInfos #plansInfosContent #plans #advanced .planIcon,
+  main .fullContent #plansInfos #plansInfosContent #plans #pro .planIcon {
     padding-right: 0.8rem;
   }
   main .fullContent #plansInfos #plansInfosContent #plans #arcade .planContent,
-main .fullContent #plansInfos #plansInfosContent #plans #advanced .planContent,
-main .fullContent #plansInfos #plansInfosContent #plans #pro .planContent {
+  main .fullContent #plansInfos #plansInfosContent #plans #advanced .planContent,
+  main .fullContent #plansInfos #plansInfosContent #plans #pro .planContent {
     margin-top: 0;
   }
   main .fullContent #plansInfos #plansInfosContent #plans #arcade .planContent .freeMonths,
-main .fullContent #plansInfos #plansInfosContent #plans #advanced .planContent .freeMonths,
-main .fullContent #plansInfos #plansInfosContent #plans #pro .planContent .freeMonths {
+  main .fullContent #plansInfos #plansInfosContent #plans #advanced .planContent .freeMonths,
+  main .fullContent #plansInfos #plansInfosContent #plans #pro .planContent .freeMonths {
     margin-top: 0.5rem;
   }
   main .fullContent #plansInfos #plansInfosContent .subscriptions {
@@ -591,23 +559,10 @@ main .fullContent #plansInfos #plansInfosContent #plans #pro .planContent .freeM
     left: 3px;
     align-items: center;
     justify-content: center;
-    -webkit-animation: slideOff 0.3s linear forwards;
-            animation: slideOff 0.3s linear forwards;
+    animation: slideOff 0.3s linear forwards;
   }
   main .fullContent #plansInfos #plansInfosContent .subscriptions .toggle:checked + .label .circle {
-    -webkit-animation: slideOn 0.3s linear forwards;
-            animation: slideOn 0.3s linear forwards;
-  }
-  @-webkit-keyframes slideOn {
-    0% {
-      transform: translateX(0) scale(1);
-    }
-    50% {
-      transform: translateX(10px) scale(1.2);
-    }
-    100% {
-      transform: translateX(20px) scale(1);
-    }
+    animation: slideOn 0.3s linear forwards;
   }
   @keyframes slideOn {
     0% {
@@ -618,17 +573,6 @@ main .fullContent #plansInfos #plansInfosContent #plans #pro .planContent .freeM
     }
     100% {
       transform: translateX(20px) scale(1);
-    }
-  }
-  @-webkit-keyframes slideOff {
-    0% {
-      transform: translateX(20px) scale(1);
-    }
-    50% {
-      transform: translateX(10px) scale(1.2);
-    }
-    100% {
-      transform: translateX(0) scale(1);
     }
   }
   @keyframes slideOff {
