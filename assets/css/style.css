@@ -393,12 +393,16 @@ main .fullContent #buttons .button {
   padding: 0.8rem 1rem;
   cursor: pointer;
 }
-main .fullContent #buttons #goBack {
+main .fullContent #buttons .goBack {
   background-color: var(--neutral-white);
   color: var(--neutral-cool-gray);
 }
-main .fullContent #buttons #nextStep {
+main .fullContent #buttons .nextStep {
   background-color: var(--primary-marine-blue);
+  color: var(--neutral-alabaster);
+}
+main .fullContent #buttons .confirmStep {
+  background-color: var(--primary-purplish-blue);
   color: var(--neutral-alabaster);
 }
 main #mobileButtons {
@@ -623,12 +627,16 @@ main #mobileButtons {
     padding: 0.8rem 1rem;
     cursor: pointer;
   }
-  main #mobileButtons #goBack {
+  main #mobileButtons .goBack {
     background-color: var(--neutral-white);
     color: var(--neutral-cool-gray);
   }
-  main #mobileButtons #nextStep {
+  main #mobileButtons .nextStep {
     background-color: var(--primary-marine-blue);
+    color: var(--neutral-alabaster);
+  }
+  main #mobileButtons .confirmStep {
+    background-color: var(--primary-purplish-blue);
     color: var(--neutral-alabaster);
   }
 }/*# sourceMappingURL=style.css.map */

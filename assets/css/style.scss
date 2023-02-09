@@ -410,12 +410,16 @@ main {
         padding: 0.8rem 1rem;
         cursor: pointer;
       }
-      #goBack {
+      .goBack {
         background-color: var(--neutral-white);
         color: var(--neutral-cool-gray);
       }
-      #nextStep {
+      .nextStep {
         background-color: var(--primary-marine-blue);
+        color: var(--neutral-alabaster);
+      }
+      .confirmStep {
+        background-color: var(--primary-purplish-blue);
         color: var(--neutral-alabaster);
       }
     }
