@@ -10,6 +10,7 @@
     border-radius: 10px;
     padding: 0rem;
     margin: 0 1rem 30% 1rem;
+    width: 90%;
     #sidebar {
       background-image: url("../images/bg-sidebar-mobile.svg");
       position: absolute;
@@ -57,6 +58,7 @@
     }
     .fullContent {
       padding: 0;
+      width: auto;
       #personalInfos {
         #personalInfosContent {
           label {
