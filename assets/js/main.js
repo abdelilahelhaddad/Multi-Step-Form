@@ -1,9 +1,12 @@
-const goBack = document.querySelector('.goBack')
-const goBackMobile = document.querySelector('#goBackMobile')
-const nextStep = document.querySelector('.nextStep')
-const nextStepMobile = document.querySelector('#nextStepMobile')
-const confirmStep = document.querySelector('.confirmStep')
-const confirmStepMobile = document.querySelector('#confirmStepMobile')
+const goBackItems = document.querySelectorAll('.goBack')
+const goBack = document.querySelector('#goBack')
+// const goBackMobile = document.querySelector('#goBackMobile')
+const nextStepItems = document.querySelectorAll('.nextStep')
+const nextStep = document.querySelector('#nextStep')
+// const nextStepMobile = document.querySelector('#nextStepMobile')
+const confirmStepItems = document.querySelectorAll('.confirmStep')
+const confirmStep = document.querySelector('#confirmStep')
+// const confirmStepMobile = document.querySelector('#confirmStepMobile')
 const circles = document.querySelectorAll('.circle')
 const theContents = document.querySelectorAll('.theContent')
 const thankYou = document.querySelector('#thankYou')
@@ -83,19 +86,37 @@ function update() {
   })
 
   if (currentActive === 1) {
-    goBack.classList.add('visibility')
-    goBackMobile.classList.add('visibility')
+    goBackItems.forEach(goBackItem => {
+      goBackItem.classList.add('visibility')
+    })
+    // goBack.classList.add('visibility')
+    // goBackMobile.classList.add('visibility')
   } else if (currentActive === circles.length) {
-    nextStep.classList.add('visibility')
-    nextStepMobile.classList.add('visibility')
-    confirmStep.classList.remove('hidden')
-    confirmStepMobile.classList.remove('hidden')
+    nextStepItems.forEach(nextStepItem => {
+      nextStepItem.classList.add('visibility')
+    })
+    // nextStep.classList.add('visibility')
+    // nextStepMobile.classList.add('visibility')
+    confirmStepItems.forEach(confirmStepItem => {
+      confirmStepItem.classList.remove('hidden')
+    })
+    // confirmStep.classList.remove('hidden')
+    // confirmStepMobile.classList.remove('hidden')
   } else {
-    goBack.classList.remove('visibility')
-    goBackMobile.classList.remove('visibility')
-    nextStep.classList.remove('visibility')
-    nextStepMobile.classList.remove('visibility')
-    confirmStep.classList.add('hidden')
-    confirmStepMobile.classList.add('hidden')
+    goBackItems.forEach(goBackItem => {
+      goBackItem.classList.remove('visibility')
+    })
+    // goBack.classList.remove('visibility')
+    // goBackMobile.classList.remove('visibility')
+    nextStepItems.forEach(nextStepItem => {
+      nextStepItem.classList.remove('visibility')
+    })
+    // nextStep.classList.remove('visibility')
+    // nextStepMobile.classList.remove('visibility')
+    confirmStepItems.forEach(confirmStepItem => {
+      confirmStepItem.classList.add('hidden')
+    })
+    // confirmStep.classList.add('hidden')
+    // confirmStepMobile.classList.add('hidden')
   }
 }
