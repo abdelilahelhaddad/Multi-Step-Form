@@ -257,7 +257,7 @@ main {
             animation: slideOff 0.3s linear forwards;
           }
 
-          .toggle:checked + .label .circle {
+          .toggle:checked + .label .theCircle {
             animation: slideOn 0.3s linear forwards;
           }
 

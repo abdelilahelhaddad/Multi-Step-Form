@@ -120,3 +120,36 @@ function update() {
     // confirmStepMobile.classList.add('hidden')
   }
 }
+
+const toggle = document.querySelector('.toggle')
+const monthlyPlans = document.querySelectorAll('.monthlyPlan')
+const yearlyPlans = document.querySelectorAll('.yearlyPlan')
+const freeMonths = document.querySelectorAll('.freeMonths')
+
+toggle.addEventListener('change', () => {
+  subscribtion();
+})
+
+function subscribtion() {
+  if (toggle.checked) {
+    monthlyPlans.forEach(monthlyPlan => {
+      monthlyPlan.classList.add('hidden');
+    })
+    yearlyPlans.forEach(yearlyPlan => {
+      yearlyPlan.classList.remove('hidden');
+    })
+    freeMonths.forEach(freeMonth => {
+      freeMonth.classList.remove('hidden');
+    })
+  } else {
+    monthlyPlans.forEach(monthlyPlan => {
+      monthlyPlan.classList.remove('hidden');
+    })
+    yearlyPlans.forEach(yearlyPlan => {
+      yearlyPlan.classList.add('hidden');
+    })
+    freeMonths.forEach(freeMonth => {
+      freeMonth.classList.add('hidden');
+    })
+  }
+}
