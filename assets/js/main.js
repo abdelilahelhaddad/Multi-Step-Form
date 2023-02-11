@@ -1,12 +1,9 @@
 const goBackItems = document.querySelectorAll('.goBack')
 const goBack = document.querySelector('#goBack')
-// const goBackMobile = document.querySelector('#goBackMobile')
 const nextStepItems = document.querySelectorAll('.nextStep')
 const nextStep = document.querySelector('#nextStep')
-// const nextStepMobile = document.querySelector('#nextStepMobile')
 const confirmStepItems = document.querySelectorAll('.confirmStep')
 const confirmStep = document.querySelector('#confirmStep')
-// const confirmStepMobile = document.querySelector('#confirmStepMobile')
 const circles = document.querySelectorAll('.circle')
 const theContents = document.querySelectorAll('.theContent')
 const thankYou = document.querySelector('#thankYou')
@@ -34,35 +31,42 @@ function back() {
   update()
 }
 
-nextStep.addEventListener('click', () => {
+function nextValidiation() {
   const name = document.querySelector('#name')
   const email = document.querySelector('#email')
   const tel = document.querySelector('#tel')
 
-  if (name.value == "" || name.value == null) {
+  if (name.value == "" || name.value == null || !isName(name.value)) {
     document.querySelector('#nameErrorMessage').style.visibility = "visible";
+    name.style.borderColor = "hsl(354, 84%, 57%)";
   } else {
     document.querySelector('#nameErrorMessage').style.visibility = "hidden";
   }
   if (email.value == "" || email.value == null || !isValid(email.value)) {
     document.querySelector('#emailErrorMessage').style.visibility = "visible";
+    email.style.borderColor = "hsl(354, 84%, 57%)";
   } else {
     document.querySelector('#emailErrorMessage').style.visibility = "hidden";
   }
-  if (tel.value == "" || tel.value == null || !validatePhoneNumber(tel.value)) {
+  if (tel.value == "" || tel.value == null || !isPhoneNumber(tel.value)) {
     document.querySelector('#telErrorMessage').style.visibility = "visible";
+    tel.style.borderColor = "hsl(354, 84%, 57%)";
   } else {
     document.querySelector('#telErrorMessage').style.visibility = "hidden";
   }
-  if (name.value != "" && email.value != "" && isValid(email.value) && tel.value != "" && validatePhoneNumber(tel.value)) {
+  if (name.value != "" && isName(name.value) && email.value != "" && isValid(email.value) && tel.value != "" && isPhoneNumber(tel.value)) {
     next();
   }
-})
+}
 
-function validatePhoneNumber(phoneNumber) {
-  var re = /^\(?(\d{3})\)?[- ]?(\d{3})[- ]?(\d{4})$/;
+function isName(fullName) {
+  var regx = /^[a-zA-Z]+ [a-zA-Z]+$/;
+  return regx.test(fullName);
+}
 
-  return re.test(phoneNumber);
+function isPhoneNumber(phoneNumber) {
+  var regx = /^\(?(\d{3})\)?[- ]?(\d{3})[- ]?(\d{4})$/;
+  return regx.test(phoneNumber);
 }
 
 function isValid(Email) {
@@ -70,13 +74,18 @@ function isValid(Email) {
   return regx.test(String(Email).toLowerCase());
 }
 
+nextStep.addEventListener('click', () => {
+  nextValidiation();
+})
+
 nextStepMobile.addEventListener('click', () => {
-  next()
+  nextValidiation();
 })
 
 goBack.addEventListener('click', () => {
   back()
 })
+
 goBackMobile.addEventListener('click', () => {
   back()
 })
@@ -122,35 +131,23 @@ function update() {
     goBackItems.forEach(goBackItem => {
       goBackItem.classList.add('visibility')
     })
-    // goBack.classList.add('visibility')
-    // goBackMobile.classList.add('visibility')
   } else if (currentActive === circles.length) {
     nextStepItems.forEach(nextStepItem => {
       nextStepItem.classList.add('visibility')
     })
-    // nextStep.classList.add('visibility')
-    // nextStepMobile.classList.add('visibility')
     confirmStepItems.forEach(confirmStepItem => {
       confirmStepItem.classList.remove('hidden')
     })
-    // confirmStep.classList.remove('hidden')
-    // confirmStepMobile.classList.remove('hidden')
   } else {
     goBackItems.forEach(goBackItem => {
       goBackItem.classList.remove('visibility')
     })
-    // goBack.classList.remove('visibility')
-    // goBackMobile.classList.remove('visibility')
     nextStepItems.forEach(nextStepItem => {
       nextStepItem.classList.remove('visibility')
     })
-    // nextStep.classList.remove('visibility')
-    // nextStepMobile.classList.remove('visibility')
     confirmStepItems.forEach(confirmStepItem => {
       confirmStepItem.classList.add('hidden')
     })
-    // confirmStep.classList.add('hidden')
-    // confirmStepMobile.classList.add('hidden')
   }
 }
 

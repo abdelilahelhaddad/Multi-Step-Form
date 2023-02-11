@@ -72,6 +72,9 @@ body {
   margin-top: 0.7rem;
   text-decoration: none;
 }
+.card:hover {
+  border: 1px solid var(--primary-purplish-blue);
+}
 .card:focus {
   border: 1px solid var(--primary-purplish-blue);
   background-color: var(--primary-light-blue);
@@ -201,7 +204,7 @@ main .fullContent #plansInfos #plansInfosContent #plans {
 main .fullContent #plansInfos #plansInfosContent #plans #arcade,
 main .fullContent #plansInfos #plansInfosContent #plans #advanced,
 main .fullContent #plansInfos #plansInfosContent #plans #pro {
-  width: 7rem;
+  width: 8rem;
 }
 main .fullContent #plansInfos #plansInfosContent #plans #arcade .planIcon,
 main .fullContent #plansInfos #plansInfosContent #plans #advanced .planIcon,
@@ -360,6 +363,10 @@ main .fullContent #finishingUpInfos #finishingUpInfosContent .finishingUp .choos
 }
 main .fullContent #finishingUpInfos #finishingUpInfosContent .finishingUp .choosedPlan a.miniSubTitle {
   text-decoration: underline;
+  cursor: pointer;
+}
+main .fullContent #finishingUpInfos #finishingUpInfosContent .finishingUp .choosedPlan a.miniSubTitle:hover {
+  color: var(--primary-purplish-blue);
 }
 main .fullContent #finishingUpInfos #finishingUpInfosContent .finishingUp .choosedAddons div {
   display: flex;
@@ -416,13 +423,22 @@ main .fullContent #buttons .goBack {
   background-color: var(--neutral-white);
   color: var(--neutral-cool-gray);
 }
+main .fullContent #buttons .goBack:hover {
+  color: var(--primary-marine-blue);
+}
 main .fullContent #buttons .nextStep {
   background-color: var(--primary-marine-blue);
   color: var(--neutral-alabaster);
 }
+main .fullContent #buttons .nextStep:hover {
+  opacity: 0.9;
+}
 main .fullContent #buttons .confirmStep {
   background-color: var(--primary-purplish-blue);
   color: var(--neutral-alabaster);
+}
+main .fullContent #buttons .confirmStep:hover {
+  opacity: 0.7;
 }
 main #mobileButtons {
   display: none;
