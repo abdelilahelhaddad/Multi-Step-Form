@@ -167,6 +167,15 @@ main {
         }
         form .inputInfo {
           margin-top: 1rem;
+          position: relative;
+          small {
+            position: absolute;
+            right: 0;
+            color: var(--primary-strawberry-red);
+            font-weight: var(--font-weight-700);
+            font-size: 0.8rem;
+            visibility: hidden;
+          }
         }
         input {
           width: 100%;

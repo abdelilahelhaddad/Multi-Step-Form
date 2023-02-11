@@ -35,8 +35,41 @@ function back() {
 }
 
 nextStep.addEventListener('click', () => {
-  next()
+  const name = document.querySelector('#name')
+  const email = document.querySelector('#email')
+  const tel = document.querySelector('#tel')
+
+  if (name.value == "" || name.value == null) {
+    document.querySelector('#nameErrorMessage').style.visibility = "visible";
+  } else {
+    document.querySelector('#nameErrorMessage').style.visibility = "hidden";
+  }
+  if (email.value == "" || email.value == null || !isValid(email.value)) {
+    document.querySelector('#emailErrorMessage').style.visibility = "visible";
+  } else {
+    document.querySelector('#emailErrorMessage').style.visibility = "hidden";
+  }
+  if (tel.value == "" || tel.value == null || !validatePhoneNumber(tel.value)) {
+    document.querySelector('#telErrorMessage').style.visibility = "visible";
+  } else {
+    document.querySelector('#telErrorMessage').style.visibility = "hidden";
+  }
+  if (name.value != "" && email.value != "" && isValid(email.value) && tel.value != "" && validatePhoneNumber(tel.value)) {
+    next();
+  }
 })
+
+function validatePhoneNumber(phoneNumber) {
+  var re = /^\(?(\d{3})\)?[- ]?(\d{3})[- ]?(\d{4})$/;
+
+  return re.test(phoneNumber);
+}
+
+function isValid(Email) {
+  const regx = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return regx.test(String(Email).toLowerCase());
+}
+
 nextStepMobile.addEventListener('click', () => {
   next()
 })
@@ -153,3 +186,4 @@ function subscribtion() {
     })
   }
 }
+

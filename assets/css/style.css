@@ -162,6 +162,15 @@ main .fullContent #personalInfos #personalInfosContent form {
 }
 main .fullContent #personalInfos #personalInfosContent form .inputInfo {
   margin-top: 1rem;
+  position: relative;
+}
+main .fullContent #personalInfos #personalInfosContent form .inputInfo small {
+  position: absolute;
+  right: 0;
+  color: var(--primary-strawberry-red);
+  font-weight: var(--font-weight-700);
+  font-size: 0.8rem;
+  visibility: hidden;
 }
 main .fullContent #personalInfos #personalInfosContent input {
   width: 100%;
@@ -426,7 +435,7 @@ main #mobileButtons {
   main {
     flex-direction: column;
     padding: 0rem;
-    margin: 0 1rem 30% 1rem;
+    margin: 0 1rem 22% 1rem;
     width: 90%;
     height: auto;
   }
